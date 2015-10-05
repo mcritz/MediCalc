@@ -15,6 +15,8 @@
 		0F0614761BC2CDC60027837F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0614741BC2CDC60027837F /* LaunchScreen.storyboard */; };
 		0F0614811BC2CDC60027837F /* MedicalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0614801BC2CDC60027837F /* MedicalcTests.swift */; };
 		0F06148C1BC2CDC60027837F /* MedicalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06148B1BC2CDC60027837F /* MedicalcUITests.swift */; };
+		0FE1192A1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; settings = {ASSET_TAGS = (); }; };
+		0FE1192B1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,7 @@
 		0F0614871BC2CDC60027837F /* MedicalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F06148B1BC2CDC60027837F /* MedicalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalcUITests.swift; sourceTree = "<group>"; };
 		0F06148D1BC2CDC60027837F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0FE119291BC2E0FF00E9B146 /* Dose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dose.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +104,7 @@
 			children = (
 				0F0614681BC2CDC60027837F /* AppDelegate.swift */,
 				0F06146A1BC2CDC60027837F /* DosingVC.swift */,
+				0FE119291BC2E0FF00E9B146 /* Dose.swift */,
 				0F06146C1BC2CDC60027837F /* Main.storyboard */,
 				0F0614721BC2CDC60027837F /* Assets.xcassets */,
 				0F0614741BC2CDC60027837F /* LaunchScreen.storyboard */,
@@ -258,6 +262,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE1192A1BC2E0FF00E9B146 /* Dose.swift in Sources */,
 				0F0614711BC2CDC60027837F /* Medicalc.xcdatamodeld in Sources */,
 				0F06146B1BC2CDC60027837F /* DosingVC.swift in Sources */,
 				0F0614691BC2CDC60027837F /* AppDelegate.swift in Sources */,
@@ -268,6 +273,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0FE1192B1BC2E0FF00E9B146 /* Dose.swift in Sources */,
 				0F0614811BC2CDC60027837F /* MedicalcTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -487,6 +493,7 @@
 				0F0614921BC2CDC60027837F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F0614931BC2CDC60027837F /* Build configuration list for PBXNativeTarget "MedicalcTests" */ = {
 			isa = XCConfigurationList;
@@ -495,6 +502,7 @@
 				0F0614951BC2CDC60027837F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F0614961BC2CDC60027837F /* Build configuration list for PBXNativeTarget "MedicalcUITests" */ = {
 			isa = XCConfigurationList;
@@ -503,6 +511,7 @@
 				0F0614981BC2CDC60027837F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
