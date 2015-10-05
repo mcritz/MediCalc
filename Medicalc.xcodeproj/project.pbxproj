@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		0F0614691BC2CDC60027837F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0614681BC2CDC60027837F /* AppDelegate.swift */; };
-		0F06146B1BC2CDC60027837F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06146A1BC2CDC60027837F /* ViewController.swift */; };
+		0F06146B1BC2CDC60027837F /* DosingVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06146A1BC2CDC60027837F /* DosingVC.swift */; };
 		0F06146E1BC2CDC60027837F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F06146C1BC2CDC60027837F /* Main.storyboard */; };
 		0F0614711BC2CDC60027837F /* Medicalc.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F06146F1BC2CDC60027837F /* Medicalc.xcdatamodeld */; };
 		0F0614731BC2CDC60027837F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F0614721BC2CDC60027837F /* Assets.xcassets */; };
@@ -37,7 +37,7 @@
 /* Begin PBXFileReference section */
 		0F0614651BC2CDC60027837F /* Medicalc.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Medicalc.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F0614681BC2CDC60027837F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0F06146A1BC2CDC60027837F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F06146A1BC2CDC60027837F /* DosingVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DosingVC.swift; sourceTree = "<group>"; };
 		0F06146D1BC2CDC60027837F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0F0614701BC2CDC60027837F /* Medicalc.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medicalc.xcdatamodel; sourceTree = "<group>"; };
 		0F0614721BC2CDC60027837F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +100,7 @@
 			isa = PBXGroup;
 			children = (
 				0F0614681BC2CDC60027837F /* AppDelegate.swift */,
-				0F06146A1BC2CDC60027837F /* ViewController.swift */,
+				0F06146A1BC2CDC60027837F /* DosingVC.swift */,
 				0F06146C1BC2CDC60027837F /* Main.storyboard */,
 				0F0614721BC2CDC60027837F /* Assets.xcassets */,
 				0F0614741BC2CDC60027837F /* LaunchScreen.storyboard */,
@@ -259,7 +259,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F0614711BC2CDC60027837F /* Medicalc.xcdatamodeld in Sources */,
-				0F06146B1BC2CDC60027837F /* ViewController.swift in Sources */,
+				0F06146B1BC2CDC60027837F /* DosingVC.swift in Sources */,
 				0F0614691BC2CDC60027837F /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
