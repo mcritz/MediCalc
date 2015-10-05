@@ -10,20 +10,16 @@ import Foundation
 
 class Dose {
     
-    var numFormatter: NSNumberFormatter {
-        set {
-            newValue.locale = NSLocale.currentLocale()
-            newValue.roundingIncrement = 0.01
-        }
-        get {
-            return self.numFormatter
-        }
+    var numFormatter: NSNumberFormatter
+    
+    init() {
+        numFormatter = NSNumberFormatter()
+        numFormatter.locale = NSLocale.currentLocale()
+        numFormatter.roundingIncrement = 0.01
     }
     
     func doubleFromString(numString: String?) -> Double {
         guard let numStr = numString as String! else { return 0 }
-        let numFormatter = NSNumberFormatter()
-        numFormatter.locale = NSLocale.currentLocale()
         let someNumber :NSNumber? = numFormatter.numberFromString(numStr)
         guard let someDouble = someNumber as? Double else { return 0 }
         return someDouble
@@ -34,9 +30,6 @@ class Dose {
     }
     
     func formatDose(num: Double) -> String {
-        let numFormatter = NSNumberFormatter()
-        numFormatter.locale = NSLocale.currentLocale()
-        numFormatter.roundingIncrement = 1
         return numFormatter.stringFromNumber(num)!
     }
     

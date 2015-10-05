@@ -21,16 +21,24 @@ class MedicalcTests: XCTestCase {
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+    func testDoubleFromString() {
+        let doseMan = Dose()
+        
+        var rd = doseMan.doubleFromString("Hello")
+        XCTAssertEqual(rd, 0)
+        
+        rd = doseMan.doubleFromString("1.0")
+        XCTAssertEqual(rd, Double(1))
+        
+        rd = doseMan.doubleFromString("6.66666")
+        XCTAssertEqual(rd, Double(6.66666))
     }
     
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measureBlock {
-            // Put the code you want to measure the time of here.
-        }
+    func testFormatDose() {
+        let doseMan = Dose()
+        
+        let rd :String = doseMan.formatDose(5)
+        XCTAssertEqual(rd, "5")
     }
     
 }
