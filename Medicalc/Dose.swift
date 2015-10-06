@@ -15,7 +15,7 @@ class Dose {
     init() {
         numFormatter = NSNumberFormatter()
         numFormatter.locale = NSLocale.currentLocale()
-        numFormatter.roundingIncrement = 0.01
+        numFormatter.numberStyle = .DecimalStyle
     }
     
     func doubleFromString(numString: String?) -> Double {
@@ -26,6 +26,9 @@ class Dose {
     }
     
     func updateResult(dose: String?, weight: String?) -> String {
+		guard let dose = dose as String! else { return "—" }
+		guard let weight = weight as String! else { return "—" }
+		if (dose.isEmpty || weight.isEmpty) { return "—" }
         return formatDose(calculate(doubleFromString(dose), weight: doubleFromString(weight)))
     }
     

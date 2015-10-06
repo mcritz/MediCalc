@@ -46,5 +46,15 @@ class MedicalcTests: XCTestCase {
 		rd = doseMan.formatDose(nil)
 		XCTAssert(rd == "—", "Should return — if NaN")
     }
+	
+	func testUpdateResult() {
+		let doseMan = Dose()
+		
+		var rd :String = doseMan.updateResult(nil, weight: "10")
+		XCTAssert(rd == "—", "should return — when dose is nil")
+		
+		rd = doseMan.updateResult("10", weight: nil)
+		XCTAssert(rd == "—", "should return — when weight is nil")
+	}
     
 }
