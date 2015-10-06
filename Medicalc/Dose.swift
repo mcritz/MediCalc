@@ -29,7 +29,8 @@ class Dose {
         return formatDose(calculate(doubleFromString(dose), weight: doubleFromString(weight)))
     }
     
-    func formatDose(num: Double) -> String {
+    func formatDose(num: Double?) -> String {
+		guard let num = num as Double! else { return "—" }
         return numFormatter.stringFromNumber(num)!
     }
     
