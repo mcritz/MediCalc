@@ -15,8 +15,17 @@
 		0F0614761BC2CDC60027837F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F0614741BC2CDC60027837F /* LaunchScreen.storyboard */; };
 		0F0614811BC2CDC60027837F /* MedicalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0614801BC2CDC60027837F /* MedicalcTests.swift */; };
 		0F06148C1BC2CDC60027837F /* MedicalcUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F06148B1BC2CDC60027837F /* MedicalcUITests.swift */; };
-		0FE1192A1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; settings = {ASSET_TAGS = (); }; };
-		0FE1192B1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; settings = {ASSET_TAGS = (); }; };
+		0F52BB691BC4DE3C00673BC7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52BB681BC4DE3C00673BC7 /* AppDelegate.swift */; };
+		0F52BB6B1BC4DE3C00673BC7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52BB6A1BC4DE3C00673BC7 /* ViewController.swift */; };
+		0F52BB6E1BC4DE3C00673BC7 /* Medicalc_Mac.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 0F52BB6C1BC4DE3C00673BC7 /* Medicalc_Mac.xcdatamodeld */; };
+		0F52BB701BC4DE3C00673BC7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0F52BB6F1BC4DE3C00673BC7 /* Assets.xcassets */; };
+		0F52BB731BC4DE3C00673BC7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0F52BB711BC4DE3C00673BC7 /* Main.storyboard */; };
+		0F52BB7E1BC4DE3D00673BC7 /* Medicalc_MacTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52BB7D1BC4DE3D00673BC7 /* Medicalc_MacTests.swift */; };
+		0F52BB891BC4DE3D00673BC7 /* Medicalc_MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52BB881BC4DE3D00673BC7 /* Medicalc_MacUITests.swift */; };
+		0F52BB941BC4DEB000673BC7 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
+		0F52BB951BC4DEB100673BC7 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
+		0FE1192A1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
+		0FE1192B1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -33,6 +42,20 @@
 			proxyType = 1;
 			remoteGlobalIDString = 0F0614641BC2CDC50027837F;
 			remoteInfo = Medicalc;
+		};
+		0F52BB7A1BC4DE3D00673BC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F06145D1BC2CDC50027837F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F52BB651BC4DE3C00673BC7;
+			remoteInfo = "Medicalc Mac";
+		};
+		0F52BB851BC4DE3D00673BC7 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 0F06145D1BC2CDC50027837F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 0F52BB651BC4DE3C00673BC7;
+			remoteInfo = "Medicalc Mac";
 		};
 /* End PBXContainerItemProxy section */
 
@@ -51,6 +74,19 @@
 		0F0614871BC2CDC60027837F /* MedicalcUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MedicalcUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F06148B1BC2CDC60027837F /* MedicalcUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedicalcUITests.swift; sourceTree = "<group>"; };
 		0F06148D1BC2CDC60027837F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F52BB661BC4DE3C00673BC7 /* Medicalc Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Medicalc Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F52BB681BC4DE3C00673BC7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		0F52BB6A1BC4DE3C00673BC7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		0F52BB6D1BC4DE3C00673BC7 /* Medicalc_Mac.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Medicalc_Mac.xcdatamodel; sourceTree = "<group>"; };
+		0F52BB6F1BC4DE3C00673BC7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		0F52BB721BC4DE3C00673BC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		0F52BB741BC4DE3C00673BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F52BB791BC4DE3D00673BC7 /* Medicalc MacTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Medicalc MacTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F52BB7D1BC4DE3D00673BC7 /* Medicalc_MacTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicalc_MacTests.swift; sourceTree = "<group>"; };
+		0F52BB7F1BC4DE3D00673BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0F52BB841BC4DE3D00673BC7 /* Medicalc MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Medicalc MacUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
+		0F52BB881BC4DE3D00673BC7 /* Medicalc_MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicalc_MacUITests.swift; sourceTree = "<group>"; };
+		0F52BB8A1BC4DE3D00673BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0FE119291BC2E0FF00E9B146 /* Dose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dose.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -76,6 +112,27 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0F52BB631BC4DE3C00673BC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F52BB761BC4DE3D00673BC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F52BB811BC4DE3D00673BC7 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
@@ -85,6 +142,9 @@
 				0F0614671BC2CDC60027837F /* Medicalc */,
 				0F06147F1BC2CDC60027837F /* MedicalcTests */,
 				0F06148A1BC2CDC60027837F /* MedicalcUITests */,
+				0F52BB671BC4DE3C00673BC7 /* Medicalc Mac */,
+				0F52BB7C1BC4DE3D00673BC7 /* Medicalc MacTests */,
+				0F52BB871BC4DE3D00673BC7 /* Medicalc MacUITests */,
 				0F0614661BC2CDC60027837F /* Products */,
 			);
 			sourceTree = "<group>";
@@ -95,6 +155,9 @@
 				0F0614651BC2CDC60027837F /* Medicalc.app */,
 				0F06147C1BC2CDC60027837F /* MedicalcTests.xctest */,
 				0F0614871BC2CDC60027837F /* MedicalcUITests.xctest */,
+				0F52BB661BC4DE3C00673BC7 /* Medicalc Mac.app */,
+				0F52BB791BC4DE3D00673BC7 /* Medicalc MacTests.xctest */,
+				0F52BB841BC4DE3D00673BC7 /* Medicalc MacUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -130,6 +193,37 @@
 				0F06148D1BC2CDC60027837F /* Info.plist */,
 			);
 			path = MedicalcUITests;
+			sourceTree = "<group>";
+		};
+		0F52BB671BC4DE3C00673BC7 /* Medicalc Mac */ = {
+			isa = PBXGroup;
+			children = (
+				0F52BB681BC4DE3C00673BC7 /* AppDelegate.swift */,
+				0F52BB6A1BC4DE3C00673BC7 /* ViewController.swift */,
+				0F52BB6F1BC4DE3C00673BC7 /* Assets.xcassets */,
+				0F52BB711BC4DE3C00673BC7 /* Main.storyboard */,
+				0F52BB741BC4DE3C00673BC7 /* Info.plist */,
+				0F52BB6C1BC4DE3C00673BC7 /* Medicalc_Mac.xcdatamodeld */,
+			);
+			path = "Medicalc Mac";
+			sourceTree = "<group>";
+		};
+		0F52BB7C1BC4DE3D00673BC7 /* Medicalc MacTests */ = {
+			isa = PBXGroup;
+			children = (
+				0F52BB7D1BC4DE3D00673BC7 /* Medicalc_MacTests.swift */,
+				0F52BB7F1BC4DE3D00673BC7 /* Info.plist */,
+			);
+			path = "Medicalc MacTests";
+			sourceTree = "<group>";
+		};
+		0F52BB871BC4DE3D00673BC7 /* Medicalc MacUITests */ = {
+			isa = PBXGroup;
+			children = (
+				0F52BB881BC4DE3D00673BC7 /* Medicalc_MacUITests.swift */,
+				0F52BB8A1BC4DE3D00673BC7 /* Info.plist */,
+			);
+			path = "Medicalc MacUITests";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,6 +282,59 @@
 			productReference = 0F0614871BC2CDC60027837F /* MedicalcUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		0F52BB651BC4DE3C00673BC7 /* Medicalc Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F52BB911BC4DE3D00673BC7 /* Build configuration list for PBXNativeTarget "Medicalc Mac" */;
+			buildPhases = (
+				0F52BB621BC4DE3C00673BC7 /* Sources */,
+				0F52BB631BC4DE3C00673BC7 /* Frameworks */,
+				0F52BB641BC4DE3C00673BC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Medicalc Mac";
+			productName = "Medicalc Mac";
+			productReference = 0F52BB661BC4DE3C00673BC7 /* Medicalc Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
+		0F52BB781BC4DE3D00673BC7 /* Medicalc MacTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F52BB921BC4DE3D00673BC7 /* Build configuration list for PBXNativeTarget "Medicalc MacTests" */;
+			buildPhases = (
+				0F52BB751BC4DE3D00673BC7 /* Sources */,
+				0F52BB761BC4DE3D00673BC7 /* Frameworks */,
+				0F52BB771BC4DE3D00673BC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F52BB7B1BC4DE3D00673BC7 /* PBXTargetDependency */,
+			);
+			name = "Medicalc MacTests";
+			productName = "Medicalc MacTests";
+			productReference = 0F52BB791BC4DE3D00673BC7 /* Medicalc MacTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		0F52BB831BC4DE3D00673BC7 /* Medicalc MacUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0F52BB931BC4DE3D00673BC7 /* Build configuration list for PBXNativeTarget "Medicalc MacUITests" */;
+			buildPhases = (
+				0F52BB801BC4DE3D00673BC7 /* Sources */,
+				0F52BB811BC4DE3D00673BC7 /* Frameworks */,
+				0F52BB821BC4DE3D00673BC7 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0F52BB861BC4DE3D00673BC7 /* PBXTargetDependency */,
+			);
+			name = "Medicalc MacUITests";
+			productName = "Medicalc MacUITests";
+			productReference = 0F52BB841BC4DE3D00673BC7 /* Medicalc MacUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -208,6 +355,17 @@
 						CreatedOnToolsVersion = 7.0.1;
 						TestTargetID = 0F0614641BC2CDC50027837F;
 					};
+					0F52BB651BC4DE3C00673BC7 = {
+						CreatedOnToolsVersion = 7.1;
+					};
+					0F52BB781BC4DE3D00673BC7 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 0F52BB651BC4DE3C00673BC7;
+					};
+					0F52BB831BC4DE3D00673BC7 = {
+						CreatedOnToolsVersion = 7.1;
+						TestTargetID = 0F52BB651BC4DE3C00673BC7;
+					};
 				};
 			};
 			buildConfigurationList = 0F0614601BC2CDC50027837F /* Build configuration list for PBXProject "Medicalc" */;
@@ -226,6 +384,9 @@
 				0F0614641BC2CDC50027837F /* Medicalc */,
 				0F06147B1BC2CDC60027837F /* MedicalcTests */,
 				0F0614861BC2CDC60027837F /* MedicalcUITests */,
+				0F52BB651BC4DE3C00673BC7 /* Medicalc Mac */,
+				0F52BB781BC4DE3D00673BC7 /* Medicalc MacTests */,
+				0F52BB831BC4DE3D00673BC7 /* Medicalc MacUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +410,29 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		0F0614851BC2CDC60027837F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F52BB641BC4DE3C00673BC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F52BB701BC4DE3C00673BC7 /* Assets.xcassets in Resources */,
+				0F52BB731BC4DE3C00673BC7 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F52BB771BC4DE3D00673BC7 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F52BB821BC4DE3D00673BC7 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -286,6 +470,34 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		0F52BB621BC4DE3C00673BC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F52BB941BC4DEB000673BC7 /* Dose.swift in Sources */,
+				0F52BB6B1BC4DE3C00673BC7 /* ViewController.swift in Sources */,
+				0F52BB6E1BC4DE3C00673BC7 /* Medicalc_Mac.xcdatamodeld in Sources */,
+				0F52BB691BC4DE3C00673BC7 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F52BB751BC4DE3D00673BC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F52BB951BC4DEB100673BC7 /* Dose.swift in Sources */,
+				0F52BB7E1BC4DE3D00673BC7 /* Medicalc_MacTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		0F52BB801BC4DE3D00673BC7 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				0F52BB891BC4DE3D00673BC7 /* Medicalc_MacUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
@@ -298,6 +510,16 @@
 			isa = PBXTargetDependency;
 			target = 0F0614641BC2CDC50027837F /* Medicalc */;
 			targetProxy = 0F0614881BC2CDC60027837F /* PBXContainerItemProxy */;
+		};
+		0F52BB7B1BC4DE3D00673BC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F52BB651BC4DE3C00673BC7 /* Medicalc Mac */;
+			targetProxy = 0F52BB7A1BC4DE3D00673BC7 /* PBXContainerItemProxy */;
+		};
+		0F52BB861BC4DE3D00673BC7 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 0F52BB651BC4DE3C00673BC7 /* Medicalc Mac */;
+			targetProxy = 0F52BB851BC4DE3D00673BC7 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -316,6 +538,14 @@
 				0F0614751BC2CDC60027837F /* Base */,
 			);
 			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		0F52BB711BC4DE3C00673BC7 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				0F52BB721BC4DE3C00673BC7 /* Base */,
+			);
+			name = Main.storyboard;
 			sourceTree = "<group>";
 		};
 /* End PBXVariantGroup section */
@@ -474,6 +704,100 @@
 			};
 			name = Release;
 		};
+		0F52BB8B1BC4DE3D00673BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Medicalc Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapoftheunexplored.Medicalc-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		0F52BB8C1BC4DE3D00673BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Medicalc Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapoftheunexplored.Medicalc-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		0F52BB8D1BC4DE3D00673BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Medicalc MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapoftheunexplored.Medicalc-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Medicalc Mac.app/Contents/MacOS/Medicalc Mac";
+			};
+			name = Debug;
+		};
+		0F52BB8E1BC4DE3D00673BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Medicalc MacTests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapoftheunexplored.Medicalc-MacTests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Medicalc Mac.app/Contents/MacOS/Medicalc Mac";
+			};
+			name = Release;
+		};
+		0F52BB8F1BC4DE3D00673BC7 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Medicalc MacUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapoftheunexplored.Medicalc-MacUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = "Medicalc Mac";
+				USES_XCTRUNNER = YES;
+			};
+			name = Debug;
+		};
+		0F52BB901BC4DE3D00673BC7 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				COMBINE_HIDPI_IMAGES = YES;
+				INFOPLIST_FILE = "Medicalc MacUITests/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/../Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.mapoftheunexplored.Medicalc-MacUITests";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				TEST_TARGET_NAME = "Medicalc Mac";
+				USES_XCTRUNNER = YES;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -513,6 +837,30 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		0F52BB911BC4DE3D00673BC7 /* Build configuration list for PBXNativeTarget "Medicalc Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F52BB8B1BC4DE3D00673BC7 /* Debug */,
+				0F52BB8C1BC4DE3D00673BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0F52BB921BC4DE3D00673BC7 /* Build configuration list for PBXNativeTarget "Medicalc MacTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F52BB8D1BC4DE3D00673BC7 /* Debug */,
+				0F52BB8E1BC4DE3D00673BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		0F52BB931BC4DE3D00673BC7 /* Build configuration list for PBXNativeTarget "Medicalc MacUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				0F52BB8F1BC4DE3D00673BC7 /* Debug */,
+				0F52BB901BC4DE3D00673BC7 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
@@ -523,6 +871,16 @@
 			);
 			currentVersion = 0F0614701BC2CDC60027837F /* Medicalc.xcdatamodel */;
 			path = Medicalc.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+		0F52BB6C1BC4DE3C00673BC7 /* Medicalc_Mac.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				0F52BB6D1BC4DE3C00673BC7 /* Medicalc_Mac.xcdatamodel */,
+			);
+			currentVersion = 0F52BB6D1BC4DE3C00673BC7 /* Medicalc_Mac.xcdatamodel */;
+			path = Medicalc_Mac.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
 		};

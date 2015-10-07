@@ -4,6 +4,11 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
+		<key>Medicalc Mac.xcscheme</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>1</integer>
+		</dict>
 		<key>Medicalc.xcscheme</key>
 		<dict>
 			<key>orderHint</key>
@@ -23,6 +28,21 @@
 			<true/>
 		</dict>
 		<key>0F0614861BC2CDC60027837F</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F52BB651BC4DE3C00673BC7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F52BB781BC4DE3D00673BC7</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>0F52BB831BC4DE3D00673BC7</key>
 		<dict>
 			<key>primary</key>
 			<true/>
