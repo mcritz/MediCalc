@@ -11,6 +11,16 @@ import Foundation
 class Dose {
     
     var numFormatter: NSNumberFormatter
+	
+	enum Default {
+		case Empty
+		func desc() -> String {
+			switch self {
+			case .Empty:
+				return "—"
+			}
+		}
+	}
     
     init() {
         numFormatter = NSNumberFormatter()
@@ -28,19 +38,15 @@ class Dose {
 	func updateResult(inputs: [String?]) -> String {
 		var inputDoubles = [Double]()
 		for input in inputs {
-			guard let inputString = input as String! else { return "—" }
-			if (inputString.isEmpty) { return "—" }
+			guard let inputString = input as String! else { return Default.Empty.desc() }
+			if (inputString.isEmpty) { return Default.Empty.desc() }
 			inputDoubles.append(doubleFromString(inputString))
 		}
-//		guard let dose = dose as String! else { return "—" }
-//		guard let weight = weight as String! else { return "—" }
-//		if (dose.isEmpty || weight.isEmpty) { return "—" }
-//        return formatDose(calculate(doubleFromString(dose), weight: doubleFromString(weight)))
 		return formatDose(calculate(inputDoubles))
     }
     
     func formatDose(num: Double?) -> String {
-		guard let num = num as Double! else { return "—" }
+		guard let num = num as Double! else { return Default.Empty.desc() }
         return numFormatter.stringFromNumber(num)!
     }
     
