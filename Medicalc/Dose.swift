@@ -47,6 +47,9 @@ class Dose {
     
     func formatDose(num: Double?) -> String {
 		guard let num = num as Double! else { return Default.Empty.desc() }
+		if (!num.isNormal) {
+			return Default.Empty.desc()
+		}
         return numFormatter.stringFromNumber(num)!
     }
     
@@ -65,5 +68,13 @@ class Dose {
 class Flolan : Dose {
 	func calculate(concentration: Double, weight: Double, rate: Double) -> Double {
 		return weight * 60 / concentration * rate
+	}
+	
+	func updateResult(weight: String?, concentration: String?, rate: String?) -> String {
+		return formatDose(calculate(
+			doubleFromString(concentration),
+			weight: doubleFromString(weight),
+			rate: doubleFromString(rate)
+		))
 	}
 }

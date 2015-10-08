@@ -10,15 +10,16 @@ import UIKit
 
 class DosingVC: UIViewController {
 
-    let doseManager = Dose()
+    let doseManager = Flolan()
     
     @IBOutlet weak var dosingInput: UITextField!
     @IBOutlet weak var concentrationInput: UITextField!
+	@IBOutlet weak var rateInput: UITextField!
+	
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBAction func inputChanged(sender: AnyObject) {
-		let inputs = [dosingInput.text, concentrationInput.text]
-        resultLabel.text = doseManager.updateResult(inputs)
+        resultLabel.text = doseManager.updateResult(dosingInput.text, concentration: concentrationInput.text, rate: rateInput.text)
     }
         
     override func viewDidLoad() {

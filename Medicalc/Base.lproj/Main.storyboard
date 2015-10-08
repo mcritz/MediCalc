@@ -86,13 +86,14 @@
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-2w-xaT">
                                 <rect key="frame" x="165" y="131" width="89" height="30"/>
                                 <animations/>
-                                <accessibility key="accessibilityConfiguration" hint="concentration in nanograms per milliliter" identifier="concentrationinput" label="concentration"/>
+                                <accessibility key="accessibilityConfiguration" hint="rate in nanograms / kg / min" identifier="rateInput" label="rateInput"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="iH7-dH-s4r"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
+                                    <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="HVs-9O-EIg"/>
                                     <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="f4c-ty-bxl"/>
                                 </connections>
                             </textField>
@@ -198,6 +199,7 @@
                     <connections>
                         <outlet property="concentrationInput" destination="dwy-pv-jcK" id="TGP-dG-yxM"/>
                         <outlet property="dosingInput" destination="fAB-2W-OeD" id="k5z-bb-tNh"/>
+                        <outlet property="rateInput" destination="Sra-2w-xaT" id="PUt-Om-4Eo"/>
                         <outlet property="resultLabel" destination="CuJ-zZ-edA" id="sSu-fl-vRE"/>
                     </connections>
                 </viewController>
