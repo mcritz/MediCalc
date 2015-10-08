@@ -6,6 +6,7 @@
 //  Copyright © 2015 Map of the Unexplored. All rights reserved.
 //
 
+/*
 import XCTest
 @testable import Medicalc_Mac
 
@@ -22,3 +23,4 @@ class Medicalc_MacTests: XCTestCase {
     }
 
 }
+*/
