@@ -17,7 +17,8 @@ class DosingVC: UIViewController {
     @IBOutlet weak var resultLabel: UILabel!
     
     @IBAction func inputChanged(sender: AnyObject) {
-        resultLabel.text = doseManager.updateResult(dosingInput.text, weight: concentrationInput.text)
+		let inputs = [dosingInput.text, concentrationInput.text]
+        resultLabel.text = doseManager.updateResult(inputs)
     }
         
     override func viewDidLoad() {

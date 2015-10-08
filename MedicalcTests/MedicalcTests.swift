@@ -50,10 +50,10 @@ class MedicalcTests: XCTestCase {
 	func testUpdateResult() {
 		let doseMan = Dose()
 		
-		var rd :String = doseMan.updateResult(nil, weight: "10")
+		var rd :String = doseMan.updateResult([nil,"50"])
 		XCTAssert(rd == "—", "should return — when dose is nil")
 		
-		rd = doseMan.updateResult("10", weight: nil)
+		rd = doseMan.updateResult(["10.4", nil])
 		XCTAssert(rd == "—", "should return — when weight is nil")
 	}
     

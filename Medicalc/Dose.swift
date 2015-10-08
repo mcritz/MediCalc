@@ -25,11 +25,18 @@ class Dose {
         return someDouble
     }
     
-    func updateResult(dose: String?, weight: String?) -> String {
-		guard let dose = dose as String! else { return "—" }
-		guard let weight = weight as String! else { return "—" }
-		if (dose.isEmpty || weight.isEmpty) { return "—" }
-        return formatDose(calculate(doubleFromString(dose), weight: doubleFromString(weight)))
+	func updateResult(inputs: [String?]) -> String {
+		var inputDoubles = [Double]()
+		for input in inputs {
+			guard let inputString = input as String! else { return "—" }
+			if (inputString.isEmpty) { return "—" }
+			inputDoubles.append(doubleFromString(inputString))
+		}
+//		guard let dose = dose as String! else { return "—" }
+//		guard let weight = weight as String! else { return "—" }
+//		if (dose.isEmpty || weight.isEmpty) { return "—" }
+//        return formatDose(calculate(doubleFromString(dose), weight: doubleFromString(weight)))
+		return formatDose(calculate(inputDoubles))
     }
     
     func formatDose(num: Double?) -> String {
@@ -37,7 +44,20 @@ class Dose {
         return numFormatter.stringFromNumber(num)!
     }
     
-    func calculate(dose: Double, weight: Double) -> Double {
-        return dose * 3 / weight
+	func calculate(inputs: [Double]) -> Double {
+		var calculation = Double()
+		for input in inputs {
+			calculation += input
+		}
+		calculation -= inputs.last!
+		calculation = calculation/inputs.last!
+        return calculation
     }
+}
+
+
+class Flolan : Dose {
+	func calculate(concentration: Double, weight: Double, rate: Double) -> Double {
+		return weight * 60 / concentration * rate
+	}
 }
