@@ -62,6 +62,18 @@ class Dose {
 		calculation = calculation/inputs.last!
         return calculation
     }
+    func save(values: [String]?) {
+        if let savedValues = values as [String]! {
+            let defaults = NSUserDefaults()
+            for value in savedValues {
+                defaults.setDouble(doubleFromString(value), forKey: value)
+            }
+        }
+    }
+    func load(key: String) -> Any {
+        let defaults = NSUserDefaults()
+        return defaults.valueForKey(key)
+    }
 }
 
 
@@ -72,7 +84,7 @@ class Flolan : Dose {
 	
 	func updateResult(weight: String?, concentration: String?, rate: String?) -> String {
 		return formatDose(calculate(
-			doubleFromString(concentration),
+            doubleFromString(concentration),
 			weight: doubleFromString(weight),
 			rate: doubleFromString(rate)
 		))
