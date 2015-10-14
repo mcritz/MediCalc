@@ -346,6 +346,7 @@
 				TargetAttributes = {
 					0F0614641BC2CDC50027837F = {
 						CreatedOnToolsVersion = 7.0.1;
+						DevelopmentTeam = UB37VMGP6E;
 					};
 					0F06147B1BC2CDC60027837F = {
 						CreatedOnToolsVersion = 7.0.1;
@@ -357,6 +358,7 @@
 					};
 					0F52BB651BC4DE3C00673BC7 = {
 						CreatedOnToolsVersion = 7.1;
+						DevelopmentTeam = UB37VMGP6E;
 					};
 					0F52BB781BC4DE3D00673BC7 = {
 						CreatedOnToolsVersion = 7.1;
@@ -638,6 +640,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Medicalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapoftheunexplored.Medicalc;
@@ -649,6 +652,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				INFOPLIST_FILE = Medicalc/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.mapoftheunexplored.Medicalc;
@@ -708,7 +712,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Medicalc Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -723,7 +727,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_IDENTITY = "Developer ID Application";
 				COMBINE_HIDPI_IMAGES = YES;
 				INFOPLIST_FILE = "Medicalc Mac/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks";
@@ -844,6 +848,7 @@
 				0F52BB8C1BC4DE3D00673BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F52BB921BC4DE3D00673BC7 /* Build configuration list for PBXNativeTarget "Medicalc MacTests" */ = {
 			isa = XCConfigurationList;
@@ -852,6 +857,7 @@
 				0F52BB8E1BC4DE3D00673BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0F52BB931BC4DE3D00673BC7 /* Build configuration list for PBXNativeTarget "Medicalc MacUITests" */ = {
 			isa = XCConfigurationList;
@@ -860,6 +866,7 @@
 				0F52BB901BC4DE3D00673BC7 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

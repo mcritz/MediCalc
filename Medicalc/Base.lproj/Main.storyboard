@@ -126,7 +126,7 @@
                                 <rect key="frame" x="165" y="209" width="415" height="21"/>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="result" identifier="result" label="result">
-                                    <accessibilityTraits key="traits" none="YES"/>
+                                    <accessibilityTraits key="traits" staticText="YES"/>
                                 </accessibility>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
