@@ -15,12 +15,26 @@ class DosingVC: UIViewController {
     @IBOutlet weak var dosingInput: UITextField!
     @IBOutlet weak var concentrationInput: UITextField!
 	@IBOutlet weak var rateInput: UITextField!
-	
     @IBOutlet weak var resultLabel: UILabel!
-    
-    @IBAction func inputChanged(sender: AnyObject) {
+	@IBOutlet weak var dismissButton: UIButton!
+
+	var activeControl = UIControl()
+	
+	@IBAction func controlActivated(sender: UIControl) {
+		activeControl = sender
+		dismissButton.hidden = false
+	}
+	
+	
+    @IBAction func inputChanged(sender: UIControl) {
+		dismissButton.hidden = false
         resultLabel.text = doseManager.updateResult(dosingInput.text, concentration: concentrationInput.text, rate: rateInput.text)
+		activeControl = sender
     }
+	@IBAction func dismissKeyboardAction(sender: UIButton) {
+		activeControl.resignFirstResponder()
+		sender.hidden = true
+	}
         
     override func viewDidLoad() {
         super.viewDidLoad()

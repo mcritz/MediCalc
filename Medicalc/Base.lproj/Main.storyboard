@@ -17,6 +17,14 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-xV-izk">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <accessibility key="accessibilityConfiguration" hint="Dismiss keyboard" identifier="dismiss" label="dismiss"/>
+                                <connections>
+                                    <action selector="dismissKeyboardAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DXb-j2-1kc"/>
+                                </connections>
+                            </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosing Weight" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KQ-VY-wXu">
                                 <rect key="frame" x="20" y="31" width="137" height="21"/>
                                 <animations/>
@@ -37,6 +45,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
+                                    <action selector="controlActivated:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="G5p-Dv-Bik"/>
                                     <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="zET-mc-jrO"/>
                                 </connections>
                             </textField>
@@ -80,6 +89,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
+                                    <action selector="controlActivated:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Owr-GX-DwU"/>
                                     <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mYe-qX-k0n"/>
                                 </connections>
                             </textField>
@@ -93,7 +103,7 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                                 <connections>
-                                    <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="HVs-9O-EIg"/>
+                                    <action selector="controlActivated:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="o1Z-pg-hfY"/>
                                     <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="f4c-ty-bxl"/>
                                 </connections>
                             </textField>
@@ -147,6 +157,10 @@
                                     </mask>
                                 </variation>
                             </label>
+                            <pickerView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvG-Ox-tqf">
+                                <rect key="frame" x="0.0" y="391" width="600" height="216"/>
+                                <animations/>
+                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -157,13 +171,17 @@
                             <constraint firstAttribute="leadingMargin" secondItem="2KQ-VY-wXu" secondAttribute="leading" id="8ep-zk-Mvw"/>
                             <constraint firstItem="lnH-5U-GtD" firstAttribute="width" secondItem="IDQ-tR-ddb" secondAttribute="width" id="AES-o1-zqF"/>
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="top" secondItem="CuJ-zZ-edA" secondAttribute="top" constant="20" id="BV9-PC-Q0n"/>
-                            <constraint firstItem="CuJ-zZ-edA" firstAttribute="leading" secondItem="dwy-pv-jcK" secondAttribute="leading" id="Cd5-yQ-0Tg"/>
+                            <constraint firstItem="CuJ-zZ-edA" firstAttribute="leading" secondItem="dwy-pv-jcK" secondAttribute="leading" id="Cd5-yQ-0Tg">
+                                <variation key="heightClass=compact" constant="97"/>
+                            </constraint>
                             <constraint firstItem="Sra-2w-xaT" firstAttribute="width" secondItem="fAB-2W-OeD" secondAttribute="width" id="DOc-DF-pZy"/>
                             <constraint firstItem="dwy-pv-jcK" firstAttribute="leading" secondItem="NO1-UM-IGS" secondAttribute="trailing" constant="8" id="EZu-nK-0nH"/>
                             <constraint firstItem="NO1-UM-IGS" firstAttribute="top" secondItem="2KQ-VY-wXu" secondAttribute="bottom" constant="30" id="J4L-ii-wgT"/>
                             <constraint firstItem="IDQ-tR-ddb" firstAttribute="baseline" secondItem="Sra-2w-xaT" secondAttribute="baseline" id="KYO-0b-ado"/>
                             <constraint firstItem="DoG-Jd-gQ6" firstAttribute="leading" secondItem="NO1-UM-IGS" secondAttribute="leading" id="KnU-TL-RZG"/>
-                            <constraint firstItem="CuJ-zZ-edA" firstAttribute="top" secondItem="Sra-2w-xaT" secondAttribute="bottom" constant="48" id="Nl5-jr-mWS"/>
+                            <constraint firstItem="CuJ-zZ-edA" firstAttribute="top" secondItem="Sra-2w-xaT" secondAttribute="bottom" constant="48" id="Nl5-jr-mWS">
+                                <variation key="heightClass=compact" constant="-130"/>
+                            </constraint>
                             <constraint firstItem="lnH-5U-GtD" firstAttribute="width" secondItem="2KQ-VY-wXu" secondAttribute="width" id="ONx-l1-LlO"/>
                             <constraint firstItem="Sra-2w-xaT" firstAttribute="baseline" secondItem="IDQ-tR-ddb" secondAttribute="baseline" id="PJm-hV-EBz"/>
                             <constraint firstItem="lnH-5U-GtD" firstAttribute="leading" secondItem="IDQ-tR-ddb" secondAttribute="leading" id="PLt-Kb-fOa"/>
@@ -174,18 +192,25 @@
                             <constraint firstItem="NO1-UM-IGS" firstAttribute="trailing" secondItem="2KQ-VY-wXu" secondAttribute="trailing" id="aR4-TH-ZMK"/>
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="leading" secondItem="CuJ-zZ-edA" secondAttribute="leading" id="aht-81-h43"/>
                             <constraint firstItem="IDQ-tR-ddb" firstAttribute="leading" secondItem="DoG-Jd-gQ6" secondAttribute="leading" id="bIx-AB-ueQ"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RvG-Ox-tqf" secondAttribute="bottom" constant="-7" id="dPo-CH-RA7"/>
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="width" secondItem="CuJ-zZ-edA" secondAttribute="width" id="dVK-Og-vh6"/>
                             <constraint firstItem="CuJ-zZ-edA" firstAttribute="top" secondItem="dwy-pv-jcK" secondAttribute="bottom" constant="22" id="dg5-yr-P9M"/>
                             <constraint firstItem="fAB-2W-OeD" firstAttribute="leading" secondItem="2KQ-VY-wXu" secondAttribute="trailing" constant="8" id="eue-zm-hJX"/>
                             <constraint firstItem="lnH-5U-GtD" firstAttribute="top" secondItem="IDQ-tR-ddb" secondAttribute="bottom" id="hNr-Vd-H0z"/>
                             <constraint firstItem="2KQ-VY-wXu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="iaz-7v-Esp"/>
+                            <constraint firstItem="Qog-xV-izk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="kAH-2C-Dat"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CuJ-zZ-edA" secondAttribute="trailing" id="n3e-W3-n4K"/>
+                            <constraint firstItem="RvG-Ox-tqf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="nEE-2p-Jl6"/>
                             <constraint firstItem="Sra-2w-xaT" firstAttribute="width" secondItem="fAB-2W-OeD" secondAttribute="width" id="p30-Rk-pSk"/>
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="top" secondItem="CuJ-zZ-edA" secondAttribute="bottom" constant="-1" id="plx-9U-815"/>
                             <constraint firstItem="lnH-5U-GtD" firstAttribute="width" secondItem="IDQ-tR-ddb" secondAttribute="width" id="rYa-ZF-tNe"/>
                             <constraint firstItem="IDQ-tR-ddb" firstAttribute="width" secondItem="2KQ-VY-wXu" secondAttribute="width" id="shy-CR-778"/>
                             <constraint firstItem="Sra-2w-xaT" firstAttribute="top" secondItem="dwy-pv-jcK" secondAttribute="bottom" constant="22" id="sxp-aO-v5X"/>
                             <constraint firstItem="Wh7-dy-nsD" firstAttribute="width" secondItem="2KQ-VY-wXu" secondAttribute="width" id="ulw-Ah-gLf"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="Qog-xV-izk" secondAttribute="trailing" constant="-20" id="um6-JM-J7L"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qog-xV-izk" secondAttribute="bottom" id="v10-fC-kXh"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="RvG-Ox-tqf" secondAttribute="trailing" constant="-20" id="vmH-Vm-9RT"/>
+                            <constraint firstItem="Qog-xV-izk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="xBD-tB-41O"/>
                             <constraint firstItem="Wh7-dy-nsD" firstAttribute="top" secondItem="2KQ-VY-wXu" secondAttribute="bottom" constant="-1" id="yWW-Pj-0XC"/>
                         </constraints>
                         <variation key="default">
@@ -200,6 +225,7 @@
                     </view>
                     <connections>
                         <outlet property="concentrationInput" destination="dwy-pv-jcK" id="TGP-dG-yxM"/>
+                        <outlet property="dismissButton" destination="Qog-xV-izk" id="Ki6-0T-1cc"/>
                         <outlet property="dosingInput" destination="fAB-2W-OeD" id="k5z-bb-tNh"/>
                         <outlet property="rateInput" destination="Sra-2w-xaT" id="PUt-Om-4Eo"/>
                         <outlet property="resultLabel" destination="CuJ-zZ-edA" id="sSu-fl-vRE"/>
@@ -207,7 +233,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="333" y="437"/>
+            <point key="canvasLocation" x="333" y="436"/>
         </scene>
     </scenes>
 </document>
