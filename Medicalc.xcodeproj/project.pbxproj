@@ -24,9 +24,6 @@
 		0F52BB891BC4DE3D00673BC7 /* Medicalc_MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52BB881BC4DE3D00673BC7 /* Medicalc_MacUITests.swift */; };
 		0F52BB941BC4DEB000673BC7 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
 		0F52BB951BC4DEB100673BC7 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
-		0FD2C7861BCEFF84004469F1 /* CZPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2C7851BCEFF84004469F1 /* CZPickerView.swift */; };
-		0FD2C7871BCEFF84004469F1 /* CZPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2C7851BCEFF84004469F1 /* CZPickerView.swift */; };
-		0FD2C7881BCEFF84004469F1 /* CZPickerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD2C7851BCEFF84004469F1 /* CZPickerView.swift */; };
 		0FE1192A1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
 		0FE1192B1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
 /* End PBXBuildFile section */
@@ -90,7 +87,6 @@
 		0F52BB841BC4DE3D00673BC7 /* Medicalc MacUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Medicalc MacUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0F52BB881BC4DE3D00673BC7 /* Medicalc_MacUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Medicalc_MacUITests.swift; sourceTree = "<group>"; };
 		0F52BB8A1BC4DE3D00673BC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		0FD2C7851BCEFF84004469F1 /* CZPickerView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CZPickerView.swift; sourceTree = "<group>"; };
 		0FE119291BC2E0FF00E9B146 /* Dose.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Dose.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -173,7 +169,6 @@
 				0F06146A1BC2CDC60027837F /* DosingVC.swift */,
 				0FE119291BC2E0FF00E9B146 /* Dose.swift */,
 				0F06146C1BC2CDC60027837F /* Main.storyboard */,
-				0FD2C7851BCEFF84004469F1 /* CZPickerView.swift */,
 				0F0614721BC2CDC60027837F /* Assets.xcassets */,
 				0F0614741BC2CDC60027837F /* LaunchScreen.storyboard */,
 				0F0614771BC2CDC60027837F /* Info.plist */,
@@ -454,7 +449,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FE1192A1BC2E0FF00E9B146 /* Dose.swift in Sources */,
-				0FD2C7861BCEFF84004469F1 /* CZPickerView.swift in Sources */,
 				0F0614711BC2CDC60027837F /* Medicalc.xcdatamodeld in Sources */,
 				0F06146B1BC2CDC60027837F /* DosingVC.swift in Sources */,
 				0F0614691BC2CDC60027837F /* AppDelegate.swift in Sources */,
@@ -465,7 +459,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0FD2C7871BCEFF84004469F1 /* CZPickerView.swift in Sources */,
 				0FE1192B1BC2E0FF00E9B146 /* Dose.swift in Sources */,
 				0F0614811BC2CDC60027837F /* MedicalcTests.swift in Sources */,
 			);
@@ -476,7 +469,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				0F06148C1BC2CDC60027837F /* MedicalcUITests.swift in Sources */,
-				0FD2C7881BCEFF84004469F1 /* CZPickerView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
