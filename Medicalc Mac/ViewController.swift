@@ -17,7 +17,9 @@ class ViewController: NSViewController {
 	@IBOutlet weak var resultLabel: NSTextField!
 	
 	override func viewDidLoad() {
-		super.viewDidLoad()
+		if #available(OSX 10.10, *) {
+		    super.viewDidLoad()
+		}
 		
 		self.title = "Medicalc"
 	}
