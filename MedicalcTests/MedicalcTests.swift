@@ -10,7 +10,11 @@ import XCTest
 //@testable import Medicalc
 
 class MedicalcTests: XCTestCase {
-    
+	let types = [Default.Empty,
+		Default.AdultKilgrams,
+		Default.MedicinceConcentrationNanogramsPerMilliliter,
+		Default.Rate]
+	
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -20,6 +24,30 @@ class MedicalcTests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+	
+	func testDefaultDesc() {
+		for someType in types {
+			let rd = someType.desc()
+			XCTAssertTrue(rd.dynamicType == String.self)
+		}
+	}
+	
+	func testDataValues() {
+		let doseMan = Dose()
+		
+		for someType in types {
+			let rd = doseMan.dataValues(someType)
+			XCTAssertTrue(rd.dynamicType == [Double].self)
+		}
+	}
+	
+	func testCalculate() {
+		let doseMan = Dose()
+		var rd = doseMan.calculate([0])
+		XCTAssert(rd.dynamicType == Double.self, "Calculate returns a double")
+		rd = doseMan.calculate([1])
+		XCTAssert(rd == Double(0), "Calculate returns 0 for 1")
+	}
     
     func testDoubleFromString() {
         let doseMan = Dose()
@@ -44,17 +72,34 @@ class MedicalcTests: XCTestCase {
         XCTAssertEqual(rd, "5")
 		
 		rd = doseMan.formatDose(nil)
-		XCTAssert(rd == "—", "Should return — if NaN")
+		XCTAssert(rd == Default.Empty.desc(), "Should return — if nil")
+		
+		
     }
 	
 	func testUpdateResult() {
 		let doseMan = Dose()
 		
 		var rd :String = doseMan.updateResult([nil,"50"])
-		XCTAssert(rd == "—", "should return — when dose is nil")
+		XCTAssert(rd == Default.Empty.desc(), "should return — when input is nil")
 		
-		rd = doseMan.updateResult(["10.4", nil])
-		XCTAssert(rd == "—", "should return — when weight is nil")
+		rd = doseMan.updateResult(["10.4", ""])
+		XCTAssert(rd == Default.Empty.desc(), "should return — when input is empty")
 	}
-    
+	
+	func testFlolanCalculate() {
+		let flolan = Flolan()
+		
+		let rd = flolan.calculate(10000, weight: 100, rate: 1)
+		XCTAssertEqual(rd, 0.6)
+	}
+	
+	func testFlolanUpdateResult() {
+		let flolan = Flolan()
+		
+		let rd = flolan.updateResult("100", concentration: "10000", rate: "1")
+		XCTAssertEqual(rd, "0.6")
+	}
+	
+	
 }

@@ -44,7 +44,7 @@ class MedicalcUITests: XCTestCase {
 		
 		app.textFields["rateInput"].tap()
 		XCTAssertTrue(app.pickers["doseInput"].exists)
-
+				
 		app.textFields["doseInput"].tap()
 		XCTAssertTrue(app.pickers["doseInput"].exists)
 	}
