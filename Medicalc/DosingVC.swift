@@ -43,17 +43,21 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		switch controllerId {
 		case "doseInput":
 			print("weight")
+			pickerControl.accessibilityHint = Default.AdultKilgrams.desc()
 			doubleValues = doseManager.dataValues(Default.AdultKilgrams)
 			break
 		case "concentrationinput":
 			print("concen")
+			pickerControl.accessibilityHint = Default.MedicinceConcentrationNanogramsPerMilliliter.desc()
 			doubleValues = doseManager.dataValues(Default.MedicinceConcentrationNanogramsPerMilliliter)
 			break
 		case "rateInput":
 			print("rate")
+			pickerControl.accessibilityHint = Default.Rate.desc()
 			doubleValues = doseManager.dataValues(Default.Rate)
 			break
 		default:
+			pickerControl.accessibilityHint = Default.Empty.desc()
 			doubleValues = [0]
 			break
 		}
@@ -119,6 +123,7 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+		pickerControl.accessibilityIdentifier = "doseInput"
 		pickerControl.hidden = true
 		pickerControl.delegate = self
 		pickerControl.dataSource = self
