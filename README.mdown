@@ -1,0 +1,3 @@
+# Medicalc
+Not a diagnostic or treatment tool
+
