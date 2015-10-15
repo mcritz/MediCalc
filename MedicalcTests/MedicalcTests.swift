@@ -7,7 +7,7 @@
 //
 
 import XCTest
-@testable import Medicalc
+//@testable import Medicalc
 
 class MedicalcTests: XCTestCase {
     
