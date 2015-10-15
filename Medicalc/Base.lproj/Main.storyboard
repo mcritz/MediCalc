@@ -35,7 +35,7 @@
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="dwy-pv-jcK">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwy-pv-jcK">
                                 <rect key="frame" x="165" y="79" width="89" height="30"/>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="concentration in nanograms per milliliter" identifier="concentrationinput" label="concentration"/>
@@ -43,7 +43,7 @@
                                     <constraint firstAttribute="width" constant="89" id="Bsr-LI-zc9"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="controlActivated:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="G5p-Dv-Bik"/>
                                     <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="zET-mc-jrO"/>
@@ -79,7 +79,7 @@
                                 <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="fAB-2W-OeD">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAB-2W-OeD">
                                 <rect key="frame" x="165" y="28" width="89" height="30"/>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="dose weight in kilograms" identifier="doseInput" label="dose"/>
@@ -87,13 +87,13 @@
                                     <constraint firstAttribute="width" constant="89" id="e73-mj-3eV"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="controlActivated:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="Owr-GX-DwU"/>
                                     <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingDidEnd" id="mYe-qX-k0n"/>
                                 </connections>
                             </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" clearButtonMode="whileEditing" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-2w-xaT">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-2w-xaT">
                                 <rect key="frame" x="165" y="131" width="89" height="30"/>
                                 <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="rate in nanograms / kg / min" identifier="rateInput" label="rateInput"/>
@@ -101,7 +101,7 @@
                                     <constraint firstAttribute="width" constant="89" id="iH7-dH-s4r"/>
                                 </constraints>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                                <textInputTraits key="textInputTraits"/>
                                 <connections>
                                     <action selector="controlActivated:" destination="BYZ-38-t0r" eventType="editingDidBegin" id="o1Z-pg-hfY"/>
                                     <action selector="inputChanged:" destination="BYZ-38-t0r" eventType="editingChanged" id="f4c-ty-bxl"/>
@@ -157,10 +157,6 @@
                                     </mask>
                                 </variation>
                             </label>
-                            <pickerView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RvG-Ox-tqf">
-                                <rect key="frame" x="0.0" y="391" width="600" height="216"/>
-                                <animations/>
-                            </pickerView>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
@@ -192,7 +188,6 @@
                             <constraint firstItem="NO1-UM-IGS" firstAttribute="trailing" secondItem="2KQ-VY-wXu" secondAttribute="trailing" id="aR4-TH-ZMK"/>
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="leading" secondItem="CuJ-zZ-edA" secondAttribute="leading" id="aht-81-h43"/>
                             <constraint firstItem="IDQ-tR-ddb" firstAttribute="leading" secondItem="DoG-Jd-gQ6" secondAttribute="leading" id="bIx-AB-ueQ"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="RvG-Ox-tqf" secondAttribute="bottom" constant="-7" id="dPo-CH-RA7"/>
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="width" secondItem="CuJ-zZ-edA" secondAttribute="width" id="dVK-Og-vh6"/>
                             <constraint firstItem="CuJ-zZ-edA" firstAttribute="top" secondItem="dwy-pv-jcK" secondAttribute="bottom" constant="22" id="dg5-yr-P9M"/>
                             <constraint firstItem="fAB-2W-OeD" firstAttribute="leading" secondItem="2KQ-VY-wXu" secondAttribute="trailing" constant="8" id="eue-zm-hJX"/>
@@ -200,7 +195,6 @@
                             <constraint firstItem="2KQ-VY-wXu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="iaz-7v-Esp"/>
                             <constraint firstItem="Qog-xV-izk" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="kAH-2C-Dat"/>
                             <constraint firstAttribute="trailingMargin" secondItem="CuJ-zZ-edA" secondAttribute="trailing" id="n3e-W3-n4K"/>
-                            <constraint firstItem="RvG-Ox-tqf" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="-20" id="nEE-2p-Jl6"/>
                             <constraint firstItem="Sra-2w-xaT" firstAttribute="width" secondItem="fAB-2W-OeD" secondAttribute="width" id="p30-Rk-pSk"/>
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="top" secondItem="CuJ-zZ-edA" secondAttribute="bottom" constant="-1" id="plx-9U-815"/>
                             <constraint firstItem="lnH-5U-GtD" firstAttribute="width" secondItem="IDQ-tR-ddb" secondAttribute="width" id="rYa-ZF-tNe"/>
@@ -209,7 +203,6 @@
                             <constraint firstItem="Wh7-dy-nsD" firstAttribute="width" secondItem="2KQ-VY-wXu" secondAttribute="width" id="ulw-Ah-gLf"/>
                             <constraint firstAttribute="trailingMargin" secondItem="Qog-xV-izk" secondAttribute="trailing" constant="-20" id="um6-JM-J7L"/>
                             <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Qog-xV-izk" secondAttribute="bottom" id="v10-fC-kXh"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="RvG-Ox-tqf" secondAttribute="trailing" constant="-20" id="vmH-Vm-9RT"/>
                             <constraint firstItem="Qog-xV-izk" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="-20" id="xBD-tB-41O"/>
                             <constraint firstItem="Wh7-dy-nsD" firstAttribute="top" secondItem="2KQ-VY-wXu" secondAttribute="bottom" constant="-1" id="yWW-Pj-0XC"/>
                         </constraints>
@@ -224,11 +217,11 @@
                         </variation>
                     </view>
                     <connections>
-                        <outlet property="concentrationInput" destination="dwy-pv-jcK" id="TGP-dG-yxM"/>
+                        <outlet property="concentrationInput" destination="dwy-pv-jcK" id="dJA-dS-5CH"/>
                         <outlet property="dismissButton" destination="Qog-xV-izk" id="Ki6-0T-1cc"/>
-                        <outlet property="dosingInput" destination="fAB-2W-OeD" id="k5z-bb-tNh"/>
-                        <outlet property="rateInput" destination="Sra-2w-xaT" id="PUt-Om-4Eo"/>
+                        <outlet property="rateInput" destination="Sra-2w-xaT" id="D2G-dA-koG"/>
                         <outlet property="resultLabel" destination="CuJ-zZ-edA" id="sSu-fl-vRE"/>
+                        <outlet property="weightInput" destination="fAB-2W-OeD" id="QZM-WZ-Bqg"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

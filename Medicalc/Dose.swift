@@ -8,26 +8,80 @@
 
 import Foundation
 
-class Dose {
-    
-    var numFormatter: NSNumberFormatter
+enum Default {
+	case Empty
+	case AdultKilgrams,
+	MedicinceConcentrationNanogramsPerMilliliter,
+	Rate
 	
-	enum Default {
-		case Empty
-		func desc() -> String {
-			switch self {
-			case .Empty:
-				return "—"
-			}
+	func desc() -> String {
+		switch self {
+		case .Empty:
+			return "—"
+		case .AdultKilgrams:
+			return "Kilograms"
+		case .MedicinceConcentrationNanogramsPerMilliliter:
+			return "nanograms per milliliter"
+		case .Rate:
+			return "nanograms per kilogram per minute"
 		}
 	}
-    
+	
+	func startingValue() -> Double {
+		switch self {
+		case .AdultKilgrams:
+			return 160
+		case .MedicinceConcentrationNanogramsPerMilliliter:
+			return 50000
+		case .Rate:
+			return 1
+		default:
+			return 0
+		}
+	}
+}
+
+
+class Dose {
+	
+    var numFormatter: NSNumberFormatter
+	
     init() {
         numFormatter = NSNumberFormatter()
         numFormatter.locale = NSLocale.currentLocale()
         numFormatter.numberStyle = .DecimalStyle
+		numFormatter.maximumFractionDigits = 2
     }
-    
+	
+	func dataValues(type: Default) -> [Double] {
+		switch type {
+		case .AdultKilgrams:
+			var someKg = [Double]()
+			for kk in 45...200 {
+				someKg.append(Double(kk))
+			}
+			return someKg
+		case .MedicinceConcentrationNanogramsPerMilliliter:
+			var someNgMl = [Double]()
+			for mm in 1...100 {
+				someNgMl.append(Double(mm) * 1000)
+			}
+			return someNgMl
+		case .Rate:
+			var someConcentration = [Double]()
+			for cc in 1..<10 {
+				someConcentration.append(Double(cc) / 10)
+			}
+			for bigC in 1...156 {
+				someConcentration.append(Double(bigC))
+				someConcentration.append(Double(bigC) + 0.5)
+			}
+			return someConcentration
+		default:
+			return [0]
+		}
+	}
+	
     func doubleFromString(numString: String?) -> Double {
         guard let numStr = numString as String! else { return 0 }
         let someNumber :NSNumber? = numFormatter.numberFromString(numStr)
