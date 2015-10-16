@@ -120,6 +120,7 @@ class Dose {
 
 
 class Flolan : Dose {
+	let description = "Flolan"
 	func calculate(concentration: Double, weight: Double, rate: Double) -> Double {
 		return weight * 60 / concentration * rate
 	}

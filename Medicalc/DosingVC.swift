@@ -123,6 +123,8 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
         
     override func viewDidLoad() {
         super.viewDidLoad()
+		self.title = doseManager.description
+		
 		pickerControl.accessibilityIdentifier = "doseInput"
 		pickerControl.hidden = true
 		pickerControl.delegate = self
