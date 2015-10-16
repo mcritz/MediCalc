@@ -10,17 +10,17 @@ import Cocoa
 
 class ViewController: NSViewController {
 	
-	let doseManager = Dose()
+	let doseManager = Flolan()
 	
 	@IBOutlet weak var weightInput: NSTextField!
 	@IBOutlet weak var concentrationInput: NSTextField!
+	@IBOutlet weak var rateInput: NSTextField!
 	@IBOutlet weak var resultLabel: NSTextField!
 	
 	override func viewDidLoad() {
 		if #available(OSX 10.10, *) {
 		    super.viewDidLoad()
 		}
-		
 		self.title = NSLocalizedString("Medicalc", comment:"The brand name of this app")
 	}
 
@@ -31,8 +31,7 @@ class ViewController: NSViewController {
 	}
 
 	@IBAction func inputUpdated(sender: NSTextField) {
-		self.resultLabel.stringValue = doseManager.updateResult([weightInput.stringValue, concentrationInput.stringValue])
-	}
+		self.resultLabel.stringValue = doseManager.updateResult(weightInput.stringValue, concentration:concentrationInput.stringValue, rate:rateInput.stringValue)	}
 
 }
 

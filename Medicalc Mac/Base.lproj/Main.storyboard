@@ -670,11 +670,11 @@
             <objects>
                 <viewController id="XfG-lQ-9wD" customClass="ViewController" customModule="Medicalc_Mac" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="m2S-Jp-Qdl">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="200"/>
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="271"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Ai2-8q-JaX">
-                                <rect key="frame" x="18" y="163" width="150" height="17"/>
+                                <rect key="frame" x="18" y="234" width="150" height="17"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="146" id="Lp3-Fi-p5l"/>
                                 </constraints>
@@ -686,7 +686,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="eAM-bp-Z8k">
-                                <rect key="frame" x="174" y="160" width="286" height="22"/>
+                                <rect key="frame" x="174" y="231" width="286" height="22"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="2Ob-Ez-9An">
                                     <font key="font" metaFont="system"/>
@@ -699,7 +699,7 @@
                                 </connections>
                             </textField>
                             <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Qg4-sb-HQv">
-                                <rect key="frame" x="174" y="96" width="286" height="22"/>
+                                <rect key="frame" x="174" y="167" width="286" height="22"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="Sni-xC-WgU">
                                     <font key="font" metaFont="system"/>
@@ -712,7 +712,7 @@
                                 </connections>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="GiW-xj-hRI">
-                                <rect key="frame" x="172" y="144" width="290" height="17"/>
+                                <rect key="frame" x="172" y="215" width="290" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="patient baseline weight in kg" id="xHD-8w-0WA">
                                     <font key="font" metaFont="system"/>
@@ -721,7 +721,7 @@
                                 </textFieldCell>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="aQ4-zx-3An">
-                                <rect key="frame" x="172" y="80" width="290" height="17"/>
+                                <rect key="frame" x="172" y="151" width="290" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="concentration in nanograms per milliliter" id="lr3-Yc-txr">
                                     <font key="font" metaFont="system"/>
@@ -752,7 +752,7 @@
                                 <accessibility description="result" help="result" identifier="result"/>
                             </textField>
                             <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="MHe-7A-aJJ">
-                                <rect key="frame" x="18" y="99" width="150" height="17"/>
+                                <rect key="frame" x="18" y="170" width="150" height="17"/>
                                 <animations/>
                                 <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Concentration" id="rQ2-cS-ahw">
                                     <font key="font" metaFont="systemBold"/>
@@ -760,23 +760,64 @@
                                     <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                 </textFieldCell>
                             </textField>
+                            <textField verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="vT0-V8-kZ2">
+                                <rect key="frame" x="174" y="95" width="286" height="22"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="YqB-aq-sVB">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                                <accessibility description="concentration" help="drug concentration in nanograms per milliliter" identifier="concentrationinput"/>
+                                <connections>
+                                    <action selector="inputUpdated:" target="XfG-lQ-9wD" id="dKa-z0-CCV"/>
+                                </connections>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="RSD-Y7-Em1">
+                                <rect key="frame" x="172" y="79" width="290" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="nanograms / kg / min" id="Efu-lt-hIR">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="headerColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="cfu-ah-qvi">
+                                <rect key="frame" x="18" y="98" width="150" height="17"/>
+                                <animations/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="right" title="Rate" id="Ijc-Jt-L2A">
+                                    <font key="font" metaFont="systemBold"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
                         </subviews>
                         <constraints>
+                            <constraint firstItem="cfu-ah-qvi" firstAttribute="width" secondItem="MHe-7A-aJJ" secondAttribute="width" id="0IG-2W-kYJ"/>
+                            <constraint firstItem="vT0-V8-kZ2" firstAttribute="leading" secondItem="cfu-ah-qvi" secondAttribute="trailing" constant="8" id="5PN-PB-e0a"/>
                             <constraint firstItem="Qg4-sb-HQv" firstAttribute="width" secondItem="eAM-bp-Z8k" secondAttribute="width" id="7G1-GR-gkO"/>
                             <constraint firstItem="Ai2-8q-JaX" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="8TH-Zu-eUa"/>
                             <constraint firstItem="aQ4-zx-3An" firstAttribute="leading" secondItem="YR3-Bd-85P" secondAttribute="leading" id="9ab-il-CVQ"/>
                             <constraint firstItem="aQ4-zx-3An" firstAttribute="leading" secondItem="Qg4-sb-HQv" secondAttribute="leading" id="DAm-Dm-Jb6"/>
                             <constraint firstItem="GiW-xj-hRI" firstAttribute="leading" secondItem="eAM-bp-Z8k" secondAttribute="leading" id="DRL-Vm-aJk"/>
+                            <constraint firstItem="vT0-V8-kZ2" firstAttribute="width" secondItem="eAM-bp-Z8k" secondAttribute="width" id="EXt-x5-xG6"/>
                             <constraint firstItem="aQ4-zx-3An" firstAttribute="top" secondItem="Qg4-sb-HQv" secondAttribute="bottom" constant="-1" id="Flt-GB-ifP"/>
                             <constraint firstAttribute="trailing" secondItem="eAM-bp-Z8k" secondAttribute="trailing" constant="20" id="GBA-8c-PJk"/>
                             <constraint firstItem="eAM-bp-Z8k" firstAttribute="leading" secondItem="Ai2-8q-JaX" secondAttribute="trailing" constant="8" id="GRi-xV-9UB"/>
                             <constraint firstItem="aQ4-zx-3An" firstAttribute="width" secondItem="Qg4-sb-HQv" secondAttribute="width" id="Hhl-i4-VVc"/>
+                            <constraint firstItem="cfu-ah-qvi" firstAttribute="baseline" secondItem="vT0-V8-kZ2" secondAttribute="baseline" id="Hw1-YA-LQY"/>
                             <constraint firstItem="MHe-7A-aJJ" firstAttribute="leading" secondItem="Ai2-8q-JaX" secondAttribute="leading" id="IxI-am-hkF"/>
                             <constraint firstItem="Qg4-sb-HQv" firstAttribute="top" secondItem="GiW-xj-hRI" secondAttribute="bottom" constant="26" id="JYG-zh-umd"/>
+                            <constraint firstItem="RSD-Y7-Em1" firstAttribute="width" secondItem="vT0-V8-kZ2" secondAttribute="width" id="Ma7-QO-44D"/>
                             <constraint firstItem="GiW-xj-hRI" firstAttribute="top" secondItem="eAM-bp-Z8k" secondAttribute="bottom" constant="-1" id="N5i-a4-6zw"/>
+                            <constraint firstItem="RSD-Y7-Em1" firstAttribute="width" secondItem="vT0-V8-kZ2" secondAttribute="width" id="OXu-xj-LbV"/>
                             <constraint firstItem="MHe-7A-aJJ" firstAttribute="baseline" secondItem="Qg4-sb-HQv" secondAttribute="baseline" id="Ou0-hS-Fxk"/>
+                            <constraint firstItem="RSD-Y7-Em1" firstAttribute="top" secondItem="vT0-V8-kZ2" secondAttribute="bottom" constant="-1" id="QEh-72-vdq"/>
                             <constraint firstAttribute="trailing" secondItem="YR3-Bd-85P" secondAttribute="trailing" constant="20" id="Sf8-H8-8pm"/>
+                            <constraint firstItem="cfu-ah-qvi" firstAttribute="leading" secondItem="MHe-7A-aJJ" secondAttribute="leading" id="SyT-QR-Jer"/>
+                            <constraint firstItem="vT0-V8-kZ2" firstAttribute="top" secondItem="aQ4-zx-3An" secondAttribute="bottom" constant="34" id="bFo-V3-Kug"/>
                             <constraint firstAttribute="bottom" secondItem="YR3-Bd-85P" secondAttribute="bottom" constant="20" id="bPI-Wr-Via"/>
+                            <constraint firstItem="YR3-Bd-85P" firstAttribute="top" secondItem="RSD-Y7-Em1" secondAttribute="bottom" constant="42" id="cR2-Pl-JCW"/>
                             <constraint firstItem="Ai2-8q-JaX" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="cWH-Un-7tx"/>
                             <constraint firstItem="aQ4-zx-3An" firstAttribute="trailing" secondItem="YR3-Bd-85P" secondAttribute="trailing" id="eJY-I6-cYW"/>
                             <constraint firstItem="4y3-DB-4Bi" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" constant="20" id="jxB-vF-rGd"/>
@@ -785,21 +826,24 @@
                             <constraint firstItem="MHe-7A-aJJ" firstAttribute="width" secondItem="Ai2-8q-JaX" secondAttribute="width" id="n20-ft-ehF"/>
                             <constraint firstItem="4y3-DB-4Bi" firstAttribute="baseline" secondItem="YR3-Bd-85P" secondAttribute="baseline" id="n5M-JQ-vuI"/>
                             <constraint firstItem="YR3-Bd-85P" firstAttribute="width" secondItem="eAM-bp-Z8k" secondAttribute="width" id="nDP-sL-3Ds"/>
+                            <constraint firstItem="cfu-ah-qvi" firstAttribute="baseline" secondItem="vT0-V8-kZ2" secondAttribute="baseline" id="pAo-qX-wQd"/>
                             <constraint firstItem="eAM-bp-Z8k" firstAttribute="baseline" secondItem="Ai2-8q-JaX" secondAttribute="baseline" id="q1r-v3-3fB"/>
+                            <constraint firstItem="cfu-ah-qvi" firstAttribute="trailing" secondItem="MHe-7A-aJJ" secondAttribute="trailing" id="sXt-54-Omc"/>
+                            <constraint firstItem="RSD-Y7-Em1" firstAttribute="leading" secondItem="vT0-V8-kZ2" secondAttribute="leading" id="sqa-fM-e15"/>
                             <constraint firstItem="Qg4-sb-HQv" firstAttribute="leading" secondItem="MHe-7A-aJJ" secondAttribute="trailing" constant="8" id="wPI-r8-jyy"/>
-                            <constraint firstItem="YR3-Bd-85P" firstAttribute="top" secondItem="aQ4-zx-3An" secondAttribute="bottom" constant="43" id="yXy-mJ-aEg"/>
                         </constraints>
                         <animations/>
                     </view>
                     <connections>
                         <outlet property="concentrationInput" destination="Qg4-sb-HQv" id="tT6-ba-lmS"/>
+                        <outlet property="rateInput" destination="vT0-V8-kZ2" id="Ofh-7o-Lrt"/>
                         <outlet property="resultLabel" destination="YR3-Bd-85P" id="uGC-lw-05E"/>
                         <outlet property="weightInput" destination="eAM-bp-Z8k" id="3YE-lj-oKy"/>
                     </connections>
                 </viewController>
                 <customObject id="rPt-NT-nkU" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="75" y="620"/>
+            <point key="canvasLocation" x="75" y="687.5"/>
         </scene>
     </scenes>
 </document>
