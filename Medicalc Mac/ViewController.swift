@@ -21,7 +21,7 @@ class ViewController: NSViewController {
 		    super.viewDidLoad()
 		}
 		
-		self.title = "Medicalc"
+		self.title = NSLocalizedString("Medicalc", comment:"The brand name of this app")
 	}
 
 	override var representedObject: AnyObject? {

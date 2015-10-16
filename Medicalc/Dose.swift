@@ -8,7 +8,7 @@
 
 import Foundation
 
-enum Default {
+enum DoseType {
 	case Empty
 	case AdultKilgrams,
 	MedicinceConcentrationNanogramsPerMilliliter,
@@ -53,7 +53,7 @@ class Dose {
 		numFormatter.maximumFractionDigits = 2
     }
 	
-	func dataValues(type: Default) -> [Double] {
+	func dataValues(type: DoseType) -> [Double] {
 		switch type {
 		case .AdultKilgrams:
 			var someKg = [Double]()
@@ -92,17 +92,17 @@ class Dose {
 	func updateResult(inputs: [String?]) -> String {
 		var inputDoubles = [Double]()
 		for input in inputs {
-			guard let inputString = input as String! else { return Default.Empty.desc() }
-			if (inputString.isEmpty) { return Default.Empty.desc() }
+			guard let inputString = input as String! else { return DoseType.Empty.desc() }
+			if (inputString.isEmpty) { return DoseType.Empty.desc() }
 			inputDoubles.append(doubleFromString(inputString))
 		}
 		return formatDose(calculate(inputDoubles))
     }
     
     func formatDose(num: Double?) -> String {
-		guard let num = num as Double! else { return Default.Empty.desc() }
+		guard let num = num as Double! else { return DoseType.Empty.desc() }
 		if (!num.isNormal) {
-			return Default.Empty.desc()
+			return DoseType.Empty.desc()
 		}
         return numFormatter.stringFromNumber(num)!
     }

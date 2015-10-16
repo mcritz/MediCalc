@@ -43,21 +43,21 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		switch controllerId {
 		case "doseInput":
 			print("weight")
-			pickerControl.accessibilityHint = Default.AdultKilgrams.desc()
-			doubleValues = doseManager.dataValues(Default.AdultKilgrams)
+			pickerControl.accessibilityHint = DoseType.AdultKilgrams.desc()
+			doubleValues = doseManager.dataValues(DoseType.AdultKilgrams)
 			break
 		case "concentrationinput":
 			print("concen")
-			pickerControl.accessibilityHint = Default.MedicinceConcentrationNanogramsPerMilliliter.desc()
-			doubleValues = doseManager.dataValues(Default.MedicinceConcentrationNanogramsPerMilliliter)
+			pickerControl.accessibilityHint = DoseType.MedicinceConcentrationNanogramsPerMilliliter.desc()
+			doubleValues = doseManager.dataValues(DoseType.MedicinceConcentrationNanogramsPerMilliliter)
 			break
 		case "rateInput":
 			print("rate")
-			pickerControl.accessibilityHint = Default.Rate.desc()
-			doubleValues = doseManager.dataValues(Default.Rate)
+			pickerControl.accessibilityHint = DoseType.Rate.desc()
+			doubleValues = doseManager.dataValues(DoseType.Rate)
 			break
 		default:
-			pickerControl.accessibilityHint = Default.Empty.desc()
+			pickerControl.accessibilityHint = DoseType.Empty.desc()
 			doubleValues = [0]
 			break
 		}
@@ -74,17 +74,17 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		guard let controllerId = activeControl.accessibilityIdentifier as String! else { return }
 		switch controllerId {
 		case "doseInput":
-			let text = doseManager.formatDose(doseManager.dataValues(Default.AdultKilgrams)[value])
+			let text = doseManager.formatDose(doseManager.dataValues(DoseType.AdultKilgrams)[value])
 			print("weight is \(text)")
 			weightInput.text = text
 			break
 		case "concentrationinput":
-			let text = doseManager.formatDose(doseManager.dataValues(Default.MedicinceConcentrationNanogramsPerMilliliter)[value])
+			let text = doseManager.formatDose(doseManager.dataValues(DoseType.MedicinceConcentrationNanogramsPerMilliliter)[value])
 			print("concen is \(text)")
 			concentrationInput.text = text
 			break
 		case "rateInput":
-			let text = doseManager.formatDose(doseManager.dataValues(Default.Rate)[value])
+			let text = doseManager.formatDose(doseManager.dataValues(DoseType.Rate)[value])
 			print("rate is \(text)")
 			rateInput.text = text
 			break

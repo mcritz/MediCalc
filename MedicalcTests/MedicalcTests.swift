@@ -10,10 +10,10 @@ import XCTest
 //@testable import Medicalc
 
 class MedicalcTests: XCTestCase {
-	let types = [Default.Empty,
-		Default.AdultKilgrams,
-		Default.MedicinceConcentrationNanogramsPerMilliliter,
-		Default.Rate]
+	let types = [DoseType.Empty,
+		DoseType.AdultKilgrams,
+		DoseType.MedicinceConcentrationNanogramsPerMilliliter,
+		DoseType.Rate]
 	
     override func setUp() {
         super.setUp()
@@ -72,7 +72,7 @@ class MedicalcTests: XCTestCase {
         XCTAssertEqual(rd, "5")
 		
 		rd = doseMan.formatDose(nil)
-		XCTAssert(rd == Default.Empty.desc(), "Should return — if nil")
+		XCTAssert(rd == DoseType.Empty.desc(), "Should return — if nil")
 		
 		
     }
@@ -81,10 +81,10 @@ class MedicalcTests: XCTestCase {
 		let doseMan = Dose()
 		
 		var rd :String = doseMan.updateResult([nil,"50"])
-		XCTAssert(rd == Default.Empty.desc(), "should return — when input is nil")
+		XCTAssert(rd == DoseType.Empty.desc(), "should return — when input is nil")
 		
 		rd = doseMan.updateResult(["10.4", ""])
-		XCTAssert(rd == Default.Empty.desc(), "should return — when input is empty")
+		XCTAssert(rd == DoseType.Empty.desc(), "should return — when input is empty")
 	}
 	
 	func testFlolanCalculate() {
