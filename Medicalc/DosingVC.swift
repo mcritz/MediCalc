@@ -42,17 +42,14 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		var doubleValues = [Double]()
 		switch controllerId {
 		case "doseInput":
-			print("weight")
 			pickerControl.accessibilityHint = DoseType.AdultKilgrams.desc()
 			doubleValues = doseManager.dataValues(DoseType.AdultKilgrams)
 			break
 		case "concentrationinput":
-			print("concen")
 			pickerControl.accessibilityHint = DoseType.MedicinceConcentrationNanogramsPerMilliliter.desc()
 			doubleValues = doseManager.dataValues(DoseType.MedicinceConcentrationNanogramsPerMilliliter)
 			break
 		case "rateInput":
-			print("rate")
 			pickerControl.accessibilityHint = DoseType.Rate.desc()
 			doubleValues = doseManager.dataValues(DoseType.Rate)
 			break
@@ -67,7 +64,6 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		pickerControl.frame = getPickerFrame()
 		pickerControl.hidden = false
 		pickerControl.reloadAllComponents()
-		print("showing control")
 	}
 	
 	func userUpdatedPicker(value: Int) {
