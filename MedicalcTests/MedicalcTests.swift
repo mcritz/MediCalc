@@ -14,10 +14,13 @@ class MedicalcTests: XCTestCase {
 		DoseType.AdultKilgrams,
 		DoseType.MedicinceConcentrationNanogramsPerMilliliter,
 		DoseType.Rate]
-	
+    
+    var doseMan = Dose()
+    
     override func setUp() {
         super.setUp()
         // Put setup code here. This method is called before the invocation of each test method in the class.
+        doseMan = Dose()
     }
     
     override func tearDown() {
@@ -33,7 +36,6 @@ class MedicalcTests: XCTestCase {
 	}
 	
 	func testDataValues() {
-		let doseMan = Dose()
 		
 		for someType in types {
 			let rd = doseMan.dataValues(someType)
@@ -42,7 +44,6 @@ class MedicalcTests: XCTestCase {
 	}
 	
 	func testCalculate() {
-		let doseMan = Dose()
 		var rd = doseMan.calculate([0])
 		XCTAssert(rd.dynamicType == Double.self, "Calculate returns a double")
 		rd = doseMan.calculate([1])
@@ -50,7 +51,6 @@ class MedicalcTests: XCTestCase {
 	}
     
     func testDoubleFromString() {
-        let doseMan = Dose()
         
         var rd = doseMan.doubleFromString("Hello")
         XCTAssertEqual(rd, 0)
@@ -66,7 +66,6 @@ class MedicalcTests: XCTestCase {
     }
     
     func testFormatDose() {
-        let doseMan = Dose()
         
         var rd :String = doseMan.formatDose(5)
         XCTAssertEqual(rd, "5")
@@ -74,17 +73,19 @@ class MedicalcTests: XCTestCase {
 		rd = doseMan.formatDose(nil)
 		XCTAssert(rd == DoseType.Empty.desc(), "Should return — if nil")
 		
-		
+		rd = doseMan.formatDose(Double.infinity)
+        XCTAssertEqual(rd, DoseType.Empty.desc(), "Should return — if nonnormal number")
     }
 	
 	func testUpdateResult() {
-		let doseMan = Dose()
-		
 		var rd :String = doseMan.updateResult([nil,"50"])
 		XCTAssert(rd == DoseType.Empty.desc(), "should return — when input is nil")
 		
 		rd = doseMan.updateResult(["10.4", ""])
 		XCTAssert(rd == DoseType.Empty.desc(), "should return — when input is empty")
+        
+        rd = doseMan.updateResult(["10.0", "20.0", "30"])
+        XCTAssertTrue(rd != "", "There should be some non-empty string result")
 	}
 	
 	func testFlolanCalculate() {
@@ -100,6 +101,19 @@ class MedicalcTests: XCTestCase {
 		let rd = flolan.updateResult("100", concentration: "10000", rate: "1")
 		XCTAssertEqual(rd, "0.6")
 	}
-	
+    
+    func testDoseTypeStartingValue() {
+        var result = DoseType.Empty.startingValue()
+        XCTAssertEqual(result, Double(0.0))
+        
+        result = DoseType.AdultKilgrams.startingValue()
+        XCTAssertTrue(result > 0.0)
+        
+        result = DoseType.MedicinceConcentrationNanogramsPerMilliliter.startingValue()
+        XCTAssertTrue(result > 0.0)
+        
+        result = DoseType.Rate.startingValue()
+        XCTAssertTrue(result != 0.0)
+    }
 	
 }
