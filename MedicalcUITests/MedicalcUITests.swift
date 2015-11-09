@@ -30,7 +30,7 @@ class MedicalcUITests: XCTestCase {
     
     func testConcentrationUI() {
 		XCTAssert(app.textFields["doseInput"].exists, "doesInput element exists")
-		XCTAssert(app.textFields["concentrationinput"].exists, "concentrationInput element exists")
+		XCTAssert(app.textFields["concentrationInput"].exists, "concentrationInput element exists")
 		XCTAssert(app.textFields["rateInput"].exists, "rateInput element exists")
 		XCTAssert(app.staticTexts["result"].exists, "result element exists")
 		XCTAssertTrue(app.buttons["dismiss"].exists)
@@ -38,8 +38,7 @@ class MedicalcUITests: XCTestCase {
 	
 	
 	func testPickers() {
-		
-		app.textFields["concentrationinput"].tap()
+		app.textFields["concentrationInput"].tap()
 		XCTAssertTrue(app.pickers["doseInput"].exists)
 		
 		app.textFields["rateInput"].tap()
