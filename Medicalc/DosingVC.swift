@@ -40,48 +40,89 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		currentInputData = [""]
 		guard let controllerId = control.accessibilityIdentifier as String! else { return }
 		var doubleValues = [Double]()
+		var defaultSelectedRow: Int?
+		var defaultValue = Double(0.0)
+		
 		switch controllerId {
 		case "doseInput":
 			pickerControl.accessibilityHint = DoseType.AdultKilgrams.desc()
 			doubleValues = doseManager.dataValues(DoseType.AdultKilgrams)
+			defaultValue = DoseType.AdultKilgrams.startingValue()
 			break
-		case "concentrationinput":
+		case "concentrationInput":
 			pickerControl.accessibilityHint = DoseType.MedicinceConcentrationNanogramsPerMilliliter.desc()
 			doubleValues = doseManager.dataValues(DoseType.MedicinceConcentrationNanogramsPerMilliliter)
+			defaultValue = DoseType.MedicinceConcentrationNanogramsPerMilliliter.startingValue()
 			break
 		case "rateInput":
 			pickerControl.accessibilityHint = DoseType.Rate.desc()
 			doubleValues = doseManager.dataValues(DoseType.Rate)
+			defaultValue = DoseType.Rate.startingValue()
 			break
 		default:
 			pickerControl.accessibilityHint = DoseType.Empty.desc()
 			doubleValues = [0]
 			break
 		}
+		defaultSelectedRow = doubleValues.indexOf(defaultValue)
+		
 		for vv in doubleValues {
 			currentInputData.append(doseManager.formatDose(vv))
 		}
 		pickerControl.frame = getPickerFrame()
 		pickerControl.hidden = false
 		pickerControl.reloadAllComponents()
+		
+		if (hasValue(control)) { return }
+		
+		if let defaultSelectedRow = defaultSelectedRow as Int! {
+			setValueForControl(doseManager.formatDose(defaultValue), control: control)
+			let defaultRowIndex = defaultSelectedRow + 1 // because the index of the control has a blank value as a default
+			pickerControl.selectRow(defaultRowIndex, inComponent: 0, animated: true)
+		}
+		// TODO: update selected row
+	}
+	
+	func hasValue(control :UIControl) -> Bool {
+		if let control = control as? UITextField {
+			return control.text != ""
+		}
+		return false
+	}
+	
+	func setValueForControl(value :String, control :UIControl?) {
+		if let textField = control as? UITextField {
+			textField.text = value
+		}
+	}
+	
+	func defaultRow(picker: UIPickerView, inputType: String?) -> Int {
+		guard let dataType = inputType as String! else { return 0 }
+		switch dataType {
+		case "doseInput":
+			break
+		default:
+			break
+		}
+		return 0
 	}
 	
 	func userUpdatedPicker(value: Int) {
 		guard let controllerId = activeControl.accessibilityIdentifier as String! else { return }
 		switch controllerId {
 		case "doseInput":
+			guard isGoodArray(doseManager.dataValues(DoseType.AdultKilgrams), value: value) else { break }
 			let text = doseManager.formatDose(doseManager.dataValues(DoseType.AdultKilgrams)[value])
-			print("weight is \(text)")
 			weightInput.text = text
 			break
-		case "concentrationinput":
+		case "concentrationInput":
+			guard isGoodArray(doseManager.dataValues(DoseType.MedicinceConcentrationNanogramsPerMilliliter), value: value) else { break }
 			let text = doseManager.formatDose(doseManager.dataValues(DoseType.MedicinceConcentrationNanogramsPerMilliliter)[value])
-			print("concen is \(text)")
 			concentrationInput.text = text
 			break
 		case "rateInput":
+			guard isGoodArray(doseManager.dataValues(DoseType.Rate), value: value) else { break }
 			let text = doseManager.formatDose(doseManager.dataValues(DoseType.Rate)[value])
-			print("rate is \(text)")
 			rateInput.text = text
 			break
 		default:
@@ -89,7 +130,11 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		}
 
 	}
-
+	
+	func isGoodArray(data :Array<Double>, value :Int) -> Bool {
+		return value >= 0 && value <= data.count
+	}
+	
 	func numberOfComponentsInPickerView(pickerView: UIPickerView) -> Int {
 		return 1
 	}
