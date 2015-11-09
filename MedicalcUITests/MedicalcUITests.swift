@@ -38,13 +38,11 @@ class MedicalcUITests: XCTestCase {
 	
 	
 	func testPickers() {
-		app.textFields["concentrationInput"].tap()
-		XCTAssertTrue(app.pickers["doseInput"].exists)
-		
-		app.textFields["rateInput"].tap()
-		XCTAssertTrue(app.pickers["doseInput"].exists)
-				
-		app.textFields["doseInput"].tap()
-		XCTAssertTrue(app.pickers["doseInput"].exists)
-	}
+        for field in ["concentrationInput", "rateInput", "doseInput"] {
+            app.textFields[field].tap()
+            XCTAssertTrue(app.pickers["doseInput"].exists)
+            app.buttons["dismiss"].tap()
+            XCTAssertFalse(app.pickers["doseInput"].exists)
+        }
+    }
 }
