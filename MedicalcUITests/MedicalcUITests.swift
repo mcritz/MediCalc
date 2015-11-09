@@ -38,7 +38,9 @@ class MedicalcUITests: XCTestCase {
 	
 	
 	func testPickers() {
-        for field in ["concentrationinput", "rateInput", "doseInput"] {
+        let inputs = ["concentrationinput", "rateInput", "doseInput"]
+        
+        for field in inputs {
             app.textFields[field].tap()
             XCTAssertTrue(app.pickers["doseInput"].exists)
             app.buttons["dismiss"].tap()
