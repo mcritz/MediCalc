@@ -38,7 +38,7 @@ class MedicalcUITests: XCTestCase {
 	
 	
 	func testPickers() {
-        let inputs = ["concentrationinput", "rateInput", "doseInput"]
+        let inputs = ["concentrationInput", "rateInput", "doseInput"]
         
         for field in inputs {
             app.textFields[field].tap()
