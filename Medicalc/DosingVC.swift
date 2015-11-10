@@ -41,6 +41,12 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		guard let controllerId = control.accessibilityIdentifier as String! else { return }
 		var doubleValues = [Double]()
 		var defaultSelectedRow: Int?
+		var currentValue :Double?
+		if let control = control as? UITextField {
+			let someValue = control.text
+			currentValue = doseManager.doubleFromString(someValue)
+		}
+		var currentSelectedRow: Int?
 		var defaultValue = Double(0.0)
 		
 		switch controllerId {
@@ -65,7 +71,7 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 			break
 		}
 		defaultSelectedRow = doubleValues.indexOf(defaultValue)
-		
+
 		for vv in doubleValues {
 			currentInputData.append(doseManager.formatDose(vv))
 		}
@@ -73,7 +79,16 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		pickerControl.hidden = false
 		pickerControl.reloadAllComponents()
 		
-		if (hasValue(control)) { return }
+		if (hasValue(control)) {
+			if let currentValue = currentValue as Double! {
+				currentSelectedRow = doubleValues.indexOf(currentValue)
+			}
+			if var currentSelectedRow = currentSelectedRow as Int! {
+				currentSelectedRow++
+				pickerControl.selectRow(currentSelectedRow, inComponent: 0, animated: false)
+			}
+			return
+		}
 		
 		if let defaultSelectedRow = defaultSelectedRow as Int! {
 			setValueForControl(doseManager.formatDose(defaultValue), control: control)
@@ -81,6 +96,12 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 			pickerControl.selectRow(defaultRowIndex, inComponent: 0, animated: true)
 		}
 		// TODO: update selected row
+	}
+	
+	func updatePicker(somePicker :UIPickerView, row :Int?, inputIndex :String?) {
+		guard let row = row as Int! else { return }
+		
+		somePicker.selectRow(row, inComponent: 0, animated: true)
 	}
 	
 	func hasValue(control :UIControl) -> Bool {
