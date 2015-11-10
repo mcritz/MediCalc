@@ -24,6 +24,7 @@
 		0F52BB891BC4DE3D00673BC7 /* Medicalc_MacUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F52BB881BC4DE3D00673BC7 /* Medicalc_MacUITests.swift */; };
 		0F52BB941BC4DEB000673BC7 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
 		0F52BB951BC4DEB100673BC7 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
+		0F5680961BF26A67001EA332 /* MedicalcTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F0614801BC2CDC60027837F /* MedicalcTests.swift */; };
 		0FE1192A1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
 		0FE1192B1BC2E0FF00E9B146 /* Dose.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FE119291BC2E0FF00E9B146 /* Dose.swift */; };
 /* End PBXBuildFile section */
@@ -487,6 +488,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0F5680961BF26A67001EA332 /* MedicalcTests.swift in Sources */,
 				0F52BB951BC4DEB100673BC7 /* Dose.swift in Sources */,
 				0F52BB7E1BC4DE3D00673BC7 /* Medicalc_MacTests.swift in Sources */,
 			);
