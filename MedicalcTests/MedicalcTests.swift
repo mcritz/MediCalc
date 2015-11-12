@@ -91,14 +91,14 @@ class MedicalcTests: XCTestCase {
 	func testFlolanCalculate() {
 		let flolan = Flolan()
 		
-		let rd = flolan.calculate(10000, weight: 100, rate: 1)
+		let rd = flolan.calculate(10000, weight: 100, rate: 1, resultMinutes: 60)
 		XCTAssertEqual(rd, 0.6)
 	}
 	
 	func testFlolanUpdateResult() {
 		let flolan = Flolan()
 		
-		let rd = flolan.updateResult("100", concentration: "10000", rate: "1")
+		let rd = flolan.updateResult("100", concentration: "10000", rate: "1", resultMinutes: nil)
 		XCTAssertEqual(rd, "0.6")
 	}
     

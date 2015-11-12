@@ -31,7 +31,7 @@ class ViewController: NSViewController {
 	}
 
 	@IBAction func inputUpdated(sender: NSTextField) {
-		self.resultLabel.stringValue = doseManager.updateResult(weightInput.stringValue, concentration:concentrationInput.stringValue, rate:rateInput.stringValue)	}
+		self.resultLabel.stringValue = doseManager.updateResult(weightInput.stringValue, concentration:concentrationInput.stringValue, rate:rateInput.stringValue, resultMinutes: nil)	}
 
 }
 

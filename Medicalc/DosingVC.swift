@@ -17,6 +17,7 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 	@IBOutlet weak var weightInput: UITextField!
 	@IBOutlet weak var concentrationInput: UITextField!
 	@IBOutlet weak var rateInput: UITextField!
+    @IBOutlet weak var resultScale: UISegmentedControl!
 	
     @IBOutlet weak var resultLabel: UILabel!
 	@IBOutlet weak var dismissButton: UIButton!
@@ -24,7 +25,7 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 	
 	func getPickerFrame() -> CGRect {
 		let contentWidth = self.view.bounds.width
-		let contentHeight = self.view.bounds.height / 4 > 200 ? self.view.bounds.height/4 : 200
+		let contentHeight = self.view.bounds.height / 4 > 150 ? self.view.bounds.height/4 : 150
 		return CGRectMake(0, 0, contentWidth, contentHeight)
 	}
 
@@ -172,7 +173,7 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 	
     @IBAction func inputChanged(sender: UIControl) {
 		dismissButton.hidden = false
-        resultLabel.text = doseManager.updateResult(weightInput.text, concentration: concentrationInput.text, rate: rateInput.text)
+        resultLabel.text = doseManager.updateResult(weightInput.text, concentration: concentrationInput.text, rate: rateInput.text, resultMinutes: nil)
 		activeControl = sender
 		pickerControl.hidden = false
     }
@@ -203,7 +204,8 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 			doseManager.calculate(
 				doseManager.doubleFromString(concentrationInput.text),
 				weight: doseManager.doubleFromString(weightInput.text),
-				rate: doseManager.doubleFromString(rateInput.text)
+				rate: doseManager.doubleFromString(rateInput.text),
+                resultMinutes: 60
 			)
 		)
 	}

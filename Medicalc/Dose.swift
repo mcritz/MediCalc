@@ -121,15 +121,20 @@ class Dose {
 
 class Flolan : Dose {
 	let description = "Flolan"
-	func calculate(concentration: Double, weight: Double, rate: Double) -> Double {
-		return weight * 60 / concentration * rate
+    func calculate(concentration: Double, weight: Double, rate: Double, resultMinutes: Double) -> Double {
+		return weight * resultMinutes / concentration * rate
 	}
 	
-	func updateResult(weight: String?, concentration: String?, rate: String?) -> String {
+    func updateResult(weight: String?, concentration: String?, rate: String?, resultMinutes: Double?) -> String {
+        var resultMins = Double(60)
+        if let resultMinutes = resultMinutes as Double! {
+            resultMins = resultMinutes
+        }
 		return formatDose(calculate(
 			doubleFromString(concentration),
 			weight: doubleFromString(weight),
-			rate: doubleFromString(rate)
+			rate: doubleFromString(rate),
+            resultMinutes: resultMins
 		))
 	}
 }
