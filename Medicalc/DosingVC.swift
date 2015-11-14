@@ -35,6 +35,15 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		activeControl = sender
 		dismissButton.hidden = false
 		showPickerControl(sender)
+		
+		resultLabel.text = doseManager.formatDose(
+			doseManager.calculate(
+				doseManager.doubleFromString(concentrationInput.text),
+				weight: doseManager.doubleFromString(weightInput.text),
+				rate: doseManager.doubleFromString(rateInput.text),
+				resultMinutes: getScale(resultScale.selectedSegmentIndex)
+			)
+		)
 	}
 	
 	func showPickerControl(control: UIControl) {
@@ -171,6 +180,20 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		return NSAttributedString(string: titleValue)
 	}
 	
+	@IBAction func scaleDidChange(sender: UISegmentedControl) {
+		activeControl.resignFirstResponder()
+		pickerControl.hidden = true
+
+		resultLabel.text = doseManager.formatDose(
+			doseManager.calculate(
+				doseManager.doubleFromString(concentrationInput.text),
+				weight: doseManager.doubleFromString(weightInput.text),
+				rate: doseManager.doubleFromString(rateInput.text),
+				resultMinutes: getScale(sender.selectedSegmentIndex)
+			)
+		)
+	}
+	
     @IBAction func inputChanged(sender: UIControl) {
 		dismissButton.hidden = false
         resultLabel.text = doseManager.updateResult(weightInput.text, concentration: concentrationInput.text, rate: rateInput.text, resultMinutes: nil)
@@ -196,6 +219,9 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 		weightInput.inputView = pickerControl
 		concentrationInput.inputView = pickerControl
 		rateInput.inputView = pickerControl
+		
+		resultScale.selectedSegmentIndex = 0
+		resultScale.hidden = false
     }
 	
 	func pickerView(pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -205,9 +231,24 @@ class DosingVC: UIViewController, UIPickerViewDelegate, UIPickerViewDataSource {
 				doseManager.doubleFromString(concentrationInput.text),
 				weight: doseManager.doubleFromString(weightInput.text),
 				rate: doseManager.doubleFromString(rateInput.text),
-                resultMinutes: 60
+                resultMinutes: getScale(resultScale.selectedSegmentIndex)
 			)
 		)
+	}
+	
+	
+	func getScale(val :Int) -> Double {
+		switch val {
+		case 0 :
+			return 60
+		case 1 :
+			return 60 * 60
+		case 2 :
+			return 60 * 60 * 12
+		default :
+			break
+		}
+		return 60
 	}
 
     override func didReceiveMemoryWarning() {
