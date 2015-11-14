@@ -98,10 +98,13 @@ class MedicalcTests: XCTestCase {
 	func testFlolanUpdateResult() {
 		let flolan = Flolan()
 		
-		let rd = flolan.updateResult("100", concentration: "10000", rate: "1", resultMinutes: nil)
+		var rd = flolan.updateResult("100", concentration: "10000", rate: "1", resultMinutes: nil)
+		XCTAssertEqual(rd, "0.6")
+		
+		rd = flolan.updateResult("100", concentration: "10000", rate: "1", resultMinutes: 60)
 		XCTAssertEqual(rd, "0.6")
 	}
-    
+	
     func testDoseTypeStartingValue() {
         var result = DoseType.Empty.startingValue()
         XCTAssertEqual(result, Double(0.0))
