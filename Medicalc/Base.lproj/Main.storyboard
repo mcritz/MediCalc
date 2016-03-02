@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9059" systemVersion="15C31f" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9531" systemVersion="15D9c" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9049"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9529"/>
         <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
@@ -20,12 +20,10 @@
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kv9-Ee-rbe" userLabel="Background">
                                 <rect key="frame" x="0.0" y="200" width="600" height="400"/>
-                                <animations/>
                                 <color key="backgroundColor" red="0.76862745098039209" green="0.85490196078431369" blue="0.93333333333333335" alpha="1" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Qog-xV-izk">
                                 <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
-                                <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="Dismiss keyboard" identifier="dismiss" label="dismiss"/>
                                 <connections>
                                     <action selector="dismissKeyboardAction:" destination="BYZ-38-t0r" eventType="touchUpInside" id="DXb-j2-1kc"/>
@@ -33,7 +31,6 @@
                             </button>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Dosing Weight" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2KQ-VY-wXu">
                                 <rect key="frame" x="20" y="31" width="137" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="vRH-Qx-fyL"/>
                                 </constraints>
@@ -43,7 +40,6 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dwy-pv-jcK">
                                 <rect key="frame" x="165" y="79" width="415" height="30"/>
-                                <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="concentration in nanograms per milliliter" identifier="concentrationInput" label="concentration"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="Bsr-LI-zc9"/>
@@ -62,7 +58,6 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Concentration" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="NO1-UM-IGS">
                                 <rect key="frame" x="20" y="82" width="137" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="WJM-IR-KhS"/>
                                 </constraints>
@@ -72,7 +67,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="baseline in kg" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Wh7-dy-nsD">
                                 <rect key="frame" x="20" y="51" width="137" height="16"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="E7J-LL-Cqb"/>
                                 </constraints>
@@ -82,7 +76,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nanograms per ml" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DoG-Jd-gQ6">
                                 <rect key="frame" x="20" y="103" width="137" height="16"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="FVs-ss-2BE"/>
                                 </constraints>
@@ -92,7 +85,6 @@
                             </label>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="fAB-2W-OeD">
                                 <rect key="frame" x="165" y="28" width="415" height="30"/>
-                                <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="dose weight in kilograms" identifier="doseInput" label="dose"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="e73-mj-3eV"/>
@@ -111,7 +103,6 @@
                             </textField>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Sra-2w-xaT">
                                 <rect key="frame" x="165" y="131" width="415" height="30"/>
-                                <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="rate in nanograms / kg / min" identifier="rateInput" label="rateInput"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="89" id="iH7-dH-s4r"/>
@@ -130,7 +121,6 @@
                             </textField>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rate" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="IDQ-tR-ddb">
                                 <rect key="frame" x="20" y="134" width="137" height="21"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="GP8-s2-A4g"/>
                                 </constraints>
@@ -140,7 +130,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nanograms / kg / min" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lnH-5U-GtD">
                                 <rect key="frame" x="20" y="155" width="137" height="16"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="5pr-RF-6eb"/>
                                 </constraints>
@@ -155,7 +144,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="—" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CuJ-zZ-edA">
                                 <rect key="frame" x="165" y="209" width="415" height="21"/>
-                                <animations/>
                                 <accessibility key="accessibilityConfiguration" hint="result" identifier="result" label="result">
                                     <accessibilityTraits key="traits" staticText="YES"/>
                                 </accessibility>
@@ -165,7 +153,6 @@
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="nanograms per kilogram per minute" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8sN-ZW-S5S">
                                 <rect key="frame" x="165" y="229" width="415" height="16"/>
-                                <animations/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="137" id="aoL-2I-10k"/>
                                 </constraints>
@@ -180,7 +167,6 @@
                             </label>
                             <segmentedControl hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="APY-o1-Cj8">
                                 <rect key="frame" x="165" y="253" width="415" height="29"/>
-                                <animations/>
                                 <segments>
                                     <segment title="min"/>
                                     <segment title="hour"/>
@@ -191,7 +177,6 @@
                                 </connections>
                             </segmentedControl>
                         </subviews>
-                        <animations/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                         <constraints>
                             <constraint firstItem="DoG-Jd-gQ6" firstAttribute="width" secondItem="NO1-UM-IGS" secondAttribute="width" id="2xn-88-3OB"/>
@@ -201,7 +186,7 @@
                             <constraint firstItem="lnH-5U-GtD" firstAttribute="width" secondItem="IDQ-tR-ddb" secondAttribute="width" id="AES-o1-zqF"/>
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="top" secondItem="CuJ-zZ-edA" secondAttribute="top" constant="20" id="BV9-PC-Q0n"/>
                             <constraint firstItem="CuJ-zZ-edA" firstAttribute="leading" secondItem="dwy-pv-jcK" secondAttribute="leading" id="Cd5-yQ-0Tg">
-                                <variation key="heightClass=compact" constant="97"/>
+                                <variation key="heightClass=compact" constant="0.0"/>
                             </constraint>
                             <constraint firstItem="Sra-2w-xaT" firstAttribute="width" secondItem="fAB-2W-OeD" secondAttribute="width" id="DOc-DF-pZy"/>
                             <constraint firstItem="dwy-pv-jcK" firstAttribute="leading" secondItem="NO1-UM-IGS" secondAttribute="trailing" constant="8" id="EZu-nK-0nH"/>
@@ -232,7 +217,9 @@
                             <constraint firstItem="8sN-ZW-S5S" firstAttribute="width" secondItem="CuJ-zZ-edA" secondAttribute="width" id="dVK-Og-vh6"/>
                             <constraint firstItem="CuJ-zZ-edA" firstAttribute="top" secondItem="dwy-pv-jcK" secondAttribute="bottom" constant="22" id="dg5-yr-P9M"/>
                             <constraint firstItem="fAB-2W-OeD" firstAttribute="leading" secondItem="2KQ-VY-wXu" secondAttribute="trailing" constant="8" id="eue-zm-hJX"/>
-                            <constraint firstItem="CuJ-zZ-edA" firstAttribute="baseline" secondItem="NO1-UM-IGS" secondAttribute="baseline" id="hDg-4P-IN0"/>
+                            <constraint firstItem="CuJ-zZ-edA" firstAttribute="baseline" secondItem="NO1-UM-IGS" secondAttribute="baseline" id="hDg-4P-IN0">
+                                <variation key="heightClass=compact" constant="87"/>
+                            </constraint>
                             <constraint firstItem="lnH-5U-GtD" firstAttribute="top" secondItem="IDQ-tR-ddb" secondAttribute="bottom" id="hNr-Vd-H0z"/>
                             <constraint firstAttribute="trailingMargin" secondItem="kv9-Ee-rbe" secondAttribute="trailing" constant="-20" id="iN8-QB-dfc"/>
                             <constraint firstItem="2KQ-VY-wXu" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="11" id="iaz-7v-Esp"/>
@@ -276,7 +263,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="430" y="415"/>
+            <point key="canvasLocation" x="430" y="414"/>
         </scene>
     </scenes>
 </document>
